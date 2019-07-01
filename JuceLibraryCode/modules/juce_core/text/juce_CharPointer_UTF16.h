@@ -35,9 +35,9 @@ class CharPointer_UTF16  final
 {
 public:
    #if JUCE_NATIVE_WCHAR_IS_UTF16
-    typedef wchar_t CharType;
+    using CharType = wchar_t;
    #else
-    typedef int16 CharType;
+    using CharType = int16;
    #endif
 
     inline explicit CharPointer_UTF16 (const CharType* rawPointer) noexcept
@@ -45,10 +45,7 @@ public:
     {
     }
 
-    inline CharPointer_UTF16 (const CharPointer_UTF16& other) noexcept
-        : data (other.data)
-    {
-    }
+    inline CharPointer_UTF16 (const CharPointer_UTF16& other) = default;
 
     inline CharPointer_UTF16 operator= (CharPointer_UTF16 other) noexcept
     {

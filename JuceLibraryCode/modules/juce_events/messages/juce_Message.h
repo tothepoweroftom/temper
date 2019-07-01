@@ -46,9 +46,9 @@ public:
     //==============================================================================
     /** Creates an uninitialised message. */
     Message() noexcept;
-    ~Message();
+    ~Message() override;
 
-    typedef ReferenceCountedObjectPtr<Message> Ptr;
+    using Ptr = ReferenceCountedObjectPtr<Message>;
 
     //==============================================================================
 private:

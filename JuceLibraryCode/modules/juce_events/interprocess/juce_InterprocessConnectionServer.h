@@ -45,7 +45,7 @@ public:
     InterprocessConnectionServer();
 
     /** Destructor. */
-    ~InterprocessConnectionServer();
+    ~InterprocessConnectionServer() override;
 
     //==============================================================================
     /** Starts an internal thread which listens on the given port number.
@@ -96,7 +96,7 @@ protected:
 
 private:
     //==============================================================================
-    ScopedPointer<StreamingSocket> socket;
+    std::unique_ptr<StreamingSocket> socket;
 
     void run() override;
 

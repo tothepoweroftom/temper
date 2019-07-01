@@ -216,8 +216,8 @@ public:
         class JUCE_API  IncomingDataReceiver
         {
         public:
-            IncomingDataReceiver() {}
-            virtual ~IncomingDataReceiver() {}
+            IncomingDataReceiver() = default;
+            virtual ~IncomingDataReceiver() = default;
 
             virtual void reset (int numChannels, double sampleRate, int64 totalSamplesInSource) = 0;
             virtual void addBlock (int64 sampleNumberInSource, const AudioBuffer<float>& newData,
@@ -240,8 +240,7 @@ public:
 
     private:
         class Buffer;
-        friend struct ContainerDeletePolicy<Buffer>;
-        ScopedPointer<Buffer> buffer;
+        std::unique_ptr<Buffer> buffer;
     };
 
 protected:
@@ -268,8 +267,8 @@ protected:
     template <class DestSampleType, class SourceSampleType, class DestEndianness>
     struct WriteHelper
     {
-        typedef AudioData::Pointer <DestSampleType, DestEndianness, AudioData::Interleaved, AudioData::NonConst>                DestType;
-        typedef AudioData::Pointer <SourceSampleType, AudioData::NativeEndian, AudioData::NonInterleaved, AudioData::Const>     SourceType;
+        using DestType   = AudioData::Pointer <DestSampleType,   DestEndianness,          AudioData::Interleaved,    AudioData::NonConst>;
+        using SourceType = AudioData::Pointer <SourceSampleType, AudioData::NativeEndian, AudioData::NonInterleaved, AudioData::Const>;
 
         static void write (void* destData, int numDestChannels, const int* const* source,
                            int numSamples, const int sourceOffset = 0) noexcept

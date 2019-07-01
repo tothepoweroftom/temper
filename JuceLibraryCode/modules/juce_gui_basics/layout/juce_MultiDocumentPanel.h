@@ -51,7 +51,7 @@ public:
     MultiDocumentPanelWindow (Colour backgroundColour);
 
     /** Destructor. */
-    ~MultiDocumentPanelWindow();
+    ~MultiDocumentPanelWindow() override;
 
     //==============================================================================
     /** @internal */
@@ -106,7 +106,7 @@ public:
         before closing, then you should call closeAllDocuments (true) and check that
         it returns true before deleting the panel.
     */
-    ~MultiDocumentPanel();
+    ~MultiDocumentPanel() override;
 
     //==============================================================================
     /** Tries to close all the documents.
@@ -291,7 +291,7 @@ private:
     //==============================================================================
     LayoutMode mode = MaximisedWindowsWithTabs;
     Array<Component*> components;
-    ScopedPointer<TabbedComponent> tabComponent;
+    std::unique_ptr<TabbedComponent> tabComponent;
     Colour backgroundColour { Colours::lightblue };
     int maximumNumDocuments = 0, numDocsBeforeTabsUsed = 0;
 

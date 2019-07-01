@@ -10,17 +10,17 @@
     <key>CFBundleIdentifier</key>
     <string>com.creativeintent.temper</string>
     <key>CFBundleName</key>
-    <string>Temper</string>
+    <string>Macalla Delay</string>
     <key>CFBundleDisplayName</key>
-    <string>Temper</string>
+    <string>Macalla Delay</string>
     <key>CFBundlePackageType</key>
     <string>BNDL</string>
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleShortVersionString</key>
-    <string>1.0.3</string>
+    <string>0.0.1</string>
     <key>CFBundleVersion</key>
-    <string>1.0.3</string>
+    <string>0.0.1</string>
     <key>NSHumanReadableCopyright</key>
     <string></string>
     <key>NSHighResolutionCapable</key>
@@ -29,19 +29,26 @@
     <array>
       <dict>
         <key>name</key>
-        <string>Creative Intent: Temper</string>
+        <string>tothepoweroftom: Macalla Delay</string>
         <key>description</key>
-        <string>Modern digital distortion.</string>
+        <string>Ring Modulated Delay</string>
         <key>factoryFunction</key>
-        <string>TemperAUFactory</string>
+        <string>MacallaAUFactory</string>
         <key>manufacturer</key>
-        <string>Cvin</string>
+        <string>Ttpt</string>
         <key>type</key>
         <string>aufx</string>
         <key>subtype</key>
-        <string>Tmpr</string>
+        <string>Mcdl</string>
         <key>version</key>
-        <integer>65539</integer>
+        <integer>1</integer>
+        <key>resourceUsage</key>
+        <dict>
+          <key>network.client</key>
+          <true/>
+          <key>temporary-exception.files.all.read-write</key>
+          <true/>
+        </dict>
       </dict>
     </array>
   </dict>

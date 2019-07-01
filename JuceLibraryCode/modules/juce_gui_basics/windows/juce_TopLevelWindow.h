@@ -64,7 +64,7 @@ public:
     TopLevelWindow (const String& name, bool addToDesktop);
 
     /** Destructor. */
-    ~TopLevelWindow();
+    ~TopLevelWindow() override;
 
     //==============================================================================
     /** True if this is currently the TopLevelWindow that is actively being used.
@@ -156,7 +156,7 @@ private:
     friend class TopLevelWindowManager;
     friend class ResizableWindow;
     bool useDropShadow = true, useNativeTitleBar = false, isCurrentlyActive = false;
-    ScopedPointer<DropShadower> shadower;
+    std::unique_ptr<DropShadower> shadower;
 
     void setWindowActive (bool);
 

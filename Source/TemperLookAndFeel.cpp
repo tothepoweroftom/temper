@@ -12,7 +12,7 @@
 
 TemperLookAndFeel::TemperLookAndFeel()
 {
-    setColour(Slider::rotarySliderFillColourId, Colour::fromRGBA(226, 115, 0, 255));
+    setColour(Slider::rotarySliderFillColourId, Colour::fromRGBA(255, 255, 255, 255));
 }
 
 Font TemperLookAndFeel::getBaseFont()

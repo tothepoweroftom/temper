@@ -28,6 +28,8 @@ namespace juce
     A type of InputSource that represents a URL.
 
     @see InputSource
+
+    @tags{Core}
 */
 class JUCE_API  URLInputSource     : public InputSource
 {
@@ -43,11 +45,11 @@ public:
     URLInputSource (URL&& url);
 
     /** Destructor. */
-    ~URLInputSource();
+    ~URLInputSource() override;
 
-    InputStream* createInputStream();
-    InputStream* createInputStreamFor (const String& relatedItemPath);
-    int64 hashCode() const;
+    InputStream* createInputStream() override;
+    InputStream* createInputStreamFor (const String& relatedItemPath) override;
+    int64 hashCode() const override;
 
 private:
     //==============================================================================

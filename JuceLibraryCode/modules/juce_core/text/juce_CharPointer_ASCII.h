@@ -37,17 +37,14 @@ namespace juce
 class CharPointer_ASCII  final
 {
 public:
-    typedef char CharType;
+    using CharType = char;
 
     inline explicit CharPointer_ASCII (const CharType* rawPointer) noexcept
         : data (const_cast<CharType*> (rawPointer))
     {
     }
 
-    inline CharPointer_ASCII (const CharPointer_ASCII& other) noexcept
-        : data (other.data)
-    {
-    }
+    inline CharPointer_ASCII (const CharPointer_ASCII& other) = default;
 
     inline CharPointer_ASCII operator= (const CharPointer_ASCII other) noexcept
     {

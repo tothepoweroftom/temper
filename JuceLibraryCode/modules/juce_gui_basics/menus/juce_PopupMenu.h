@@ -131,10 +131,10 @@ public:
         int itemID = 0;
 
         /** A sub-menu, or nullptr if there isn't one. */
-        ScopedPointer<PopupMenu> subMenu;
+        std::unique_ptr<PopupMenu> subMenu;
 
         /** A drawable to use as an icon, or nullptr if there isn't one. */
-        ScopedPointer<Drawable> image;
+        std::unique_ptr<Drawable> image;
 
         /** A custom component for the item to display, or nullptr if there isn't one. */
         ReferenceCountedObjectPtr<CustomComponent> customComponent;
@@ -624,7 +624,7 @@ public:
         CustomComponent (bool isTriggeredAutomatically = true);
 
         /** Destructor. */
-        ~CustomComponent();
+        ~CustomComponent() override;
 
         /** Returns a rectangle with the size that this component would like to have.
 
@@ -666,7 +666,7 @@ public:
     {
     public:
         CustomCallback();
-        ~CustomCallback();
+        ~CustomCallback() override;
 
         /** Callback to indicate this item has been triggered.
             @returns true if the itemID should be sent to the exitModalState method, or
@@ -684,7 +684,7 @@ public:
     */
     struct JUCE_API  LookAndFeelMethods
     {
-        virtual ~LookAndFeelMethods() {}
+        virtual ~LookAndFeelMethods() = default;
 
         /** Fills the background of a popup menu component. */
         virtual void drawPopupMenuBackground (Graphics&, int width, int height) = 0;

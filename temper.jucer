@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="e0DLq8" name="Temper" projectType="audioplug" version="1.0.3"
+<JUCERPROJECT id="e0DLq8" name="Macalla Delay" projectType="audioplug" version="0.0.1"
               bundleIdentifier="com.creativeintent.temper" includeBinaryInAppConfig="1"
               buildVST="1" buildVST3="1" buildAU="1" buildAUv3="0" buildRTAS="0"
-              buildAAX="0" pluginName="Temper" pluginDesc="Modern digital distortion."
-              pluginManufacturer="Creative Intent" pluginManufacturerCode="Cvin"
-              pluginCode="Tmpr" pluginChannelConfigs="" pluginIsSynth="0" pluginWantsMidiIn="0"
+              buildAAX="0" pluginName="Macalla Delay" pluginDesc="Ring Modulated Delay"
+              pluginManufacturer="tothepoweroftom" pluginManufacturerCode="Ttpt"
+              pluginCode="Mcdl" pluginChannelConfigs="" pluginIsSynth="0" pluginWantsMidiIn="0"
               pluginProducesMidiOut="0" pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="0"
-              pluginAUExportPrefix="TemperAU" pluginRTASCategory="" aaxIdentifier="com.creativeintent.temper"
-              pluginAAXCategory="AAX_ePlugInCategory_Dynamics" jucerVersion="5.3.0"
-              companyName="Creative Intent" companyWebsite="http://www.creativeintent.co"
-              displaySplashScreen="0" reportAppUsage="0" splashScreenColour="Dark"
-              buildStandalone="1" enableIAA="0">
-  <MAINGROUP id="NQTBxz" name="Temper">
+              pluginAUExportPrefix="MacallaAU" pluginRTASCategory="" aaxIdentifier="com.tothepoweroftom.macalla"
+              pluginAAXCategory="2" jucerVersion="5.4.3" companyName="tothepoweroftom"
+              companyWebsite="http://www.tothepoweroftom.com" displaySplashScreen="0"
+              reportAppUsage="0" splashScreenColour="Dark" buildStandalone="1"
+              enableIAA="0" pluginFormats="buildVST,buildVST3,buildAU,buildStandalone">
+  <MAINGROUP id="NQTBxz" name="Macalla Delay">
     <GROUP id="{B07EB401-33C5-FD72-4C14-C86C74D8477E}" name="Assets">
       <FILE id="qQ2cig" name="Background.png" compile="0" resource="1" file="Assets/Background.png"/>
       <FILE id="ePVyns" name="BeeStingPreset.xml" compile="0" resource="1"
@@ -62,7 +62,7 @@
   <EXPORTFORMATS>
     <XCODE_MAC targetFolder="Builds/MacOSX" vst3Folder="VST3_SDK">
       <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="Temper"
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="Macalla"
                        osxArchitecture="64BitUniversal" headerPath="../../Include" xcodeVstBinaryLocation="$(BUILD_DIR)/$(CONFIGURATION)"
                        xcodeVst3BinaryLocation="$(BUILD_DIR)/$(CONFIGURATION)" xcodeAudioUnitBinaryLocation="$(BUILD_DIR)/$(CONFIGURATION)"
                        osxCompatibility="10.9 SDK" vstBinaryLocation="$(BUILD_DIR)/$(CONFIGURATION)"
@@ -159,4 +159,7 @@
     <MODULE id="juce_video" showAllCode="1" useLocalCopy="1"/>
   </MODULES>
   <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+  <LIVE_SETTINGS>
+    <OSX buildEnabled="0"/>
+  </LIVE_SETTINGS>
 </JUCERPROJECT>

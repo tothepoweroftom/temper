@@ -102,7 +102,7 @@ public:
         Make sure that you don't delete this if pointers to it are still being used by
         objects such as PopupMenus or Buttons.
     */
-    virtual ~ApplicationCommandManager();
+    ~ApplicationCommandManager() override;
 
     //==============================================================================
     /** Clears the current list of all commands.
@@ -305,7 +305,7 @@ private:
     //==============================================================================
     OwnedArray<ApplicationCommandInfo> commands;
     ListenerList<ApplicationCommandManagerListener> listeners;
-    ScopedPointer<KeyPressMappingSet> keyMappings;
+    std::unique_ptr<KeyPressMappingSet> keyMappings;
     ApplicationCommandTarget* firstTarget = nullptr;
 
     void sendListenerInvokeCallback (const ApplicationCommandTarget::InvocationInfo&);
@@ -338,7 +338,7 @@ class JUCE_API  ApplicationCommandManagerListener
 public:
     //==============================================================================
     /** Destructor. */
-    virtual ~ApplicationCommandManagerListener()  {}
+    virtual ~ApplicationCommandManagerListener() = default;
 
     /** Called when an app command is about to be invoked. */
     virtual void applicationCommandInvoked (const ApplicationCommandTarget::InvocationInfo&) = 0;

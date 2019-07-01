@@ -62,7 +62,7 @@ public:
 
     //==============================================================================
     /** Create a zero-sized AudioBlock. */
-    forcedinline AudioBlock() noexcept {}
+    forcedinline AudioBlock() noexcept = default;
 
     /** Creates an AudioBlock from a pointer to an array of channels.
         AudioBlock does not copy nor own the memory pointed to by dataToUse.
@@ -143,7 +143,7 @@ public:
         : channels (buffer.getArrayOfWritePointers()),
           numChannels (static_cast<ChannelCountType> (buffer.getNumChannels())),
           startSample (startSampleIndex),
-          numSamples (static_cast<size_t> (buffer.getNumSamples()))
+          numSamples (static_cast<size_t> (buffer.getNumSamples()) - startSampleIndex)
     {
         jassert (startSample < numSamples);
     }
@@ -261,6 +261,49 @@ public:
         return *this;
     }
 
+    /** Copy the values from a JUCE's AudioBuffer to the receiver.
+
+        All indices and sizes are in the receiver's units, i.e. if SampleType is a
+        SIMDRegister then incrementing srcPos by one will increase the sample position
+        in the AudioBuffer's units by a factor of SIMDRegister<SampleType>::SIMDNumElements.
+    */
+    forcedinline AudioBlock& copyFrom (const AudioBuffer<NumericType>& src, size_t srcPos = 0, size_t dstPos = 0,
+                                       size_t numElements = std::numeric_limits<size_t>::max())
+    {
+        auto srclen = static_cast<size_t> (src.getNumSamples()) / sizeFactor;
+        auto n = static_cast<int> (jmin (srclen - srcPos, numSamples - dstPos, numElements) * sizeFactor);
+        auto maxChannels = jmin (static_cast<size_t> (src.getNumChannels()), static_cast<size_t> (numChannels));
+
+        for (size_t ch = 0; ch < maxChannels; ++ch)
+            FloatVectorOperations::copy (channelPtr (ch) + dstPos,
+                                         src.getReadPointer (static_cast<int> (ch),
+                                                             static_cast<int> (srcPos * sizeFactor)),
+                                         n);
+
+        return *this;
+    }
+
+    /** Copy the values from the receiver to a JUCE's AudioBuffer.
+
+        All indices and sizes are in the receiver's units, i.e. if SampleType is a
+        SIMDRegister then incrementing dstPos by one will increase the sample position
+        in the AudioBuffer's units by a factor of SIMDRegister<SampleType>::SIMDNumElements.
+    */
+    forcedinline const AudioBlock& copyTo (AudioBuffer<NumericType>& dst, size_t srcPos = 0, size_t dstPos = 0,
+                                           size_t numElements = std::numeric_limits<size_t>::max()) const
+    {
+        auto dstlen = static_cast<size_t> (dst.getNumSamples()) / sizeFactor;
+        auto n = static_cast<int> (jmin (numSamples - srcPos, dstlen - dstPos, numElements) * sizeFactor);
+        auto maxChannels = jmin (static_cast<size_t> (dst.getNumChannels()), static_cast<size_t> (numChannels));
+
+        for (size_t ch = 0; ch < maxChannels; ++ch)
+            FloatVectorOperations::copy (dst.getWritePointer (static_cast<int> (ch),
+                                                              static_cast<int> (dstPos * sizeFactor)),
+                                         channelPtr (ch) + srcPos, n);
+
+        return *this;
+    }
+
     /** Move memory within the receiver from the position srcPos to the position dstPos.
         If numElements is not specified then move will move the maximum amount of memory.
     */
@@ -284,7 +327,7 @@ public:
         pointed to by the receiver remains valid through-out the life-time of the
         returned sub-block.
 
-        @param newOffset   The index of an element inside the reciever which will
+        @param newOffset   The index of an element inside the receiver which will
                            will become the first element of the return value.
         @param newLength   The number of elements of the newly created sub-block.
     */
@@ -301,7 +344,7 @@ public:
         pointed to by the receiver remains valid through-out the life-time of the
         returned sub-block.
 
-        @param newOffset   The index of an element inside the reciever which will
+        @param newOffset   The index of an element inside the receiver which will
                            will become the first element of the return value.
                            The return value will include all subsequent elements
                            of the receiver.
@@ -443,7 +486,8 @@ public:
     }
 
     /** Multiplies all channels of the AudioBlock by a smoothly changing value and stores them . */
-    AudioBlock& multiply (LinearSmoothedValue<SampleType>& value) noexcept
+    template <typename SmoothingType>
+    AudioBlock& multiply (SmoothedValue<SampleType, SmoothingType>& value) noexcept
     {
         if (! value.isSmoothing())
         {
@@ -464,13 +508,14 @@ public:
     }
 
     /** Multiplies all channels of the source by a smoothly changing value and stores them in the receiver. */
-    AudioBlock& multiply (AudioBlock src, LinearSmoothedValue<SampleType>& value) noexcept
+    template <typename SmoothingType>
+    AudioBlock& multiply (AudioBlock src, SmoothedValue<SampleType, SmoothingType>& value) noexcept
     {
         jassert (numChannels == src.numChannels);
 
         if (! value.isSmoothing())
         {
-            copy (src);
+            multiply (src, value.getTargetValue());
         }
         else
         {
@@ -589,7 +634,8 @@ public:
     forcedinline AudioBlock&                      operator-= (AudioBlock src) noexcept   { return subtract (src); }
     forcedinline AudioBlock& JUCE_VECTOR_CALLTYPE operator*= (SampleType src) noexcept   { return multiply (src); }
     forcedinline AudioBlock&                      operator*= (AudioBlock src) noexcept   { return multiply (src); }
-    forcedinline AudioBlock&                      operator*= (LinearSmoothedValue<SampleType>& value) noexcept   { return multiply (value); }
+    template <typename SmoothingType>
+    forcedinline AudioBlock&                      operator*= (SmoothedValue<SampleType, SmoothingType>& value) noexcept   { return multiply (value); }
 
     //==============================================================================
     // This class can only be used with floating point types

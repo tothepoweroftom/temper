@@ -46,10 +46,7 @@ TemperAudioProcessorEditor::~TemperAudioProcessorEditor()
 //==============================================================================
 void TemperAudioProcessorEditor::paint (Graphics& g)
 {
-    Image graphBackground = ImageCache::getFromMemory(BinaryData::GraphBackground_png,
-                                                      BinaryData::GraphBackground_pngSize);
 
-    g.drawImageAt(graphBackground.rescaled(396, 134), 194, 181);
 }
 
 void TemperAudioProcessorEditor::resized()
