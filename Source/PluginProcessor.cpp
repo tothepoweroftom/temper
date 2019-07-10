@@ -95,26 +95,7 @@ int TemperAudioProcessor::getCurrentProgram()
 void TemperAudioProcessor::setCurrentProgram (int index)
 {
     switch (index) {
-        case 0:
-            setStateInformation(BinaryData::DefaultPreset_xml,
-                                BinaryData::DefaultPreset_xmlSize);
-            break;
-        case 1:
-            setStateInformation(BinaryData::StubbedToePreset_xml,
-                                BinaryData::StubbedToePreset_xmlSize);
-            break;
-        case 2:
-            setStateInformation(BinaryData::BeeStingPreset_xml,
-                                BinaryData::BeeStingPreset_xmlSize);
-            break;
-        case 3:
-            setStateInformation(BinaryData::MorningAtTheDMVPreset_xml,
-                                BinaryData::MorningAtTheDMVPreset_xmlSize);
-            break;
-        case 4:
-            setStateInformation(BinaryData::FlyingUnitedPreset_xml,
-                                BinaryData::FlyingUnitedPreset_xmlSize);
-            break;
+
         default:
             break;
     }
@@ -125,16 +106,7 @@ void TemperAudioProcessor::setCurrentProgram (int index)
 const String TemperAudioProcessor::getProgramName (int index)
 {
     switch (index) {
-        case 0:
-            return String("Default");
-        case 1:
-            return String("Stubbed Toe");
-        case 2:
-            return String("Bee Sting");
-        case 3:
-            return String("Morning at the DMV");
-        case 4:
-            return String("Flying United");
+
         default:
             return String();
     }
@@ -214,9 +186,7 @@ void TemperAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& 
     for (int i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
 
-    // Push input buffer into the Pre spectroscope component.
-    if (editor)
-        editor->m_vizPre->pushBuffer(buffer);
+
 
     // Now the guts of the processing; oversampling and applying the Faust dsp module.
     const int numInputChannels = buffer.getNumChannels();
@@ -246,9 +216,7 @@ void TemperAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& 
     m_restriction->processBlock(buffer);
 #endif
 
-    // Push resulting buffer into the Post spectroscope component.
-    if (editor)
-        editor->m_vizPost->pushBuffer(buffer);
+
 }
 
 //==============================================================================

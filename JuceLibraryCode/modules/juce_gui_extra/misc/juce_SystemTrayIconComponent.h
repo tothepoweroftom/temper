@@ -59,7 +59,7 @@ public:
     SystemTrayIconComponent();
 
     /** Destructor. */
-    ~SystemTrayIconComponent();
+    ~SystemTrayIconComponent() override;
 
     //==============================================================================
     /** Changes the image shown in the taskbar. */
@@ -96,7 +96,7 @@ public:
 private:
     //==============================================================================
     JUCE_PUBLIC_IN_DLL_BUILD (class Pimpl)
-    ScopedPointer<Pimpl> pimpl;
+    std::unique_ptr<Pimpl> pimpl;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SystemTrayIconComponent)
 };

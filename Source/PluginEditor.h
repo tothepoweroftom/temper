@@ -15,7 +15,6 @@
 #include "TemperLookAndFeel.h"
 #include "PluginProcessor.h"
 #include "MainComponent.h"
-#include "SpectroscopeComponent.h"
 
 typedef AudioProcessorValueTreeState::SliderAttachment SliderAttachment;
 
@@ -32,9 +31,7 @@ public:
     void paint (Graphics&) override;
     void resized() override;
 
-    //==============================================================================
-    ScopedPointer<SpectroscopeComponent> m_vizPre;
-    ScopedPointer<SpectroscopeComponent> m_vizPost;
+  
 
 private:
     // This reference is provided as a quick way for your editor to

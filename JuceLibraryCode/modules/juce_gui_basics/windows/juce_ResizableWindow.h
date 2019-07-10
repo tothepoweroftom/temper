@@ -79,7 +79,7 @@ public:
     /** Destructor.
         If a content component has been set with setContentOwned(), it will be deleted.
     */
-    ~ResizableWindow();
+    ~ResizableWindow() override;
 
     //==============================================================================
     /** Returns the colour currently being used for the window's background.
@@ -326,7 +326,7 @@ public:
     */
     struct JUCE_API  LookAndFeelMethods
     {
-        virtual ~LookAndFeelMethods() {}
+        virtual ~LookAndFeelMethods() = default;
 
         //==============================================================================
         virtual void drawCornerResizer (Graphics&, int w, int h, bool isMouseOver, bool isMouseDragging) = 0;
@@ -379,8 +379,8 @@ protected:
     void addAndMakeVisible (Component*, int zOrder = -1);
    #endif
 
-    ScopedPointer<ResizableCornerComponent> resizableCorner;
-    ScopedPointer<ResizableBorderComponent> resizableBorder;
+    std::unique_ptr<ResizableCornerComponent> resizableCorner;
+    std::unique_ptr<ResizableBorderComponent> resizableBorder;
 
 private:
     //==============================================================================

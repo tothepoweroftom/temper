@@ -27,6 +27,14 @@
 namespace juce
 {
 
+#if JUCE_MSVC
+ #pragma warning (push, 0)
+
+ // MSVC does not like it if you override a deprecated method even if you
+ // keep the deprecation attribute. Other compilers are more forgiving.
+ #pragma warning (disable: 4996)
+#endif
+
 //==============================================================================
 /**
     Base class for an active instance of a plugin.
@@ -51,7 +59,7 @@ public:
         Make sure that you delete any UI components that belong to this plugin before
         deleting the plugin.
     */
-    virtual ~AudioPluginInstance() {}
+    ~AudioPluginInstance() override = default;
 
     //==============================================================================
     /** Fills-in the appropriate parts of this plugin description object. */
@@ -102,15 +110,15 @@ protected:
     struct Parameter   : public AudioProcessorParameter
     {
         Parameter();
-        virtual ~Parameter();
+        ~Parameter() override;
 
-        virtual String getText (float value, int maximumStringLength) const override;
-        virtual float getValueForText (const String& text) const override;
+        String getText (float value, int maximumStringLength) const override;
+        float getValueForText (const String& text) const override;
 
         StringArray onStrings, offStrings;
     };
 
-    AudioPluginInstance() {}
+    AudioPluginInstance() = default;
     AudioPluginInstance (const BusesProperties& ioLayouts) : AudioProcessor (ioLayouts) {}
     template <int numLayouts>
     AudioPluginInstance (const short channelLayoutList[numLayouts][2]) : AudioProcessor (channelLayoutList) {}
@@ -122,5 +130,9 @@ private:
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioPluginInstance)
 };
+
+#if JUCE_MSVC
+ #pragma warning (pop)
+#endif
 
 } // namespace juce

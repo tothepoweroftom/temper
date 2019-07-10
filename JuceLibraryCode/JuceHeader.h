@@ -43,6 +43,7 @@
 namespace ProjectInfo
 {
     const char* const  projectName    = "Temper";
+    const char* const  companyName    = "Creative Intent";
     const char* const  versionString  = "1.0.3";
     const int          versionNumber  = 0x10003;
 }

@@ -8,33 +8,16 @@
               pluginCode="Tmpr" pluginChannelConfigs="" pluginIsSynth="0" pluginWantsMidiIn="0"
               pluginProducesMidiOut="0" pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="0"
               pluginAUExportPrefix="TemperAU" pluginRTASCategory="" aaxIdentifier="com.creativeintent.temper"
-              pluginAAXCategory="AAX_ePlugInCategory_Dynamics" jucerVersion="5.3.0"
-              companyName="Creative Intent" companyWebsite="http://www.creativeintent.co"
-              displaySplashScreen="0" reportAppUsage="0" splashScreenColour="Dark"
-              buildStandalone="1" enableIAA="0">
+              pluginAAXCategory="2" jucerVersion="5.4.3" companyName="Creative Intent"
+              companyWebsite="http://www.creativeintent.co" displaySplashScreen="0"
+              reportAppUsage="0" splashScreenColour="Dark" buildStandalone="1"
+              enableIAA="0" pluginFormats="buildVST,buildVST3,buildAU,buildStandalone">
   <MAINGROUP id="NQTBxz" name="Temper">
     <GROUP id="{B07EB401-33C5-FD72-4C14-C86C74D8477E}" name="Assets">
-      <FILE id="qQ2cig" name="Background.png" compile="0" resource="1" file="Assets/Background.png"/>
-      <FILE id="ePVyns" name="BeeStingPreset.xml" compile="0" resource="1"
-            file="Assets/BeeStingPreset.xml"/>
-      <FILE id="z8BOs7" name="DefaultPreset.xml" compile="0" resource="1"
-            file="Assets/DefaultPreset.xml"/>
-      <FILE id="EriasK" name="FlyingUnitedPreset.xml" compile="0" resource="1"
-            file="Assets/FlyingUnitedPreset.xml"/>
-      <FILE id="iRJMki" name="GraphBackground.png" compile="0" resource="1"
-            file="Assets/GraphBackground.png"/>
       <FILE id="Lgyi4M" name="Montserrat-Light.otf" compile="0" resource="1"
             file="Assets/Montserrat-Light.otf"/>
-      <FILE id="o2BAm1" name="MorningAtTheDMVPreset.xml" compile="0" resource="1"
-            file="Assets/MorningAtTheDMVPreset.xml"/>
-      <FILE id="E0s8d8" name="StubbedToePreset.xml" compile="0" resource="1"
-            file="Assets/StubbedToePreset.xml"/>
     </GROUP>
     <GROUP id="{29549935-F76D-270B-CF22-913999456CE7}" name="Source">
-      <FILE id="DVaBKb" name="SpectroscopeComponent.cpp" compile="1" resource="0"
-            file="Source/SpectroscopeComponent.cpp"/>
-      <FILE id="mjtLV5" name="SpectroscopeComponent.h" compile="0" resource="0"
-            file="Source/SpectroscopeComponent.h"/>
       <FILE id="gFAIV8" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>
       <FILE id="SPBe1V" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
@@ -159,4 +142,7 @@
     <MODULE id="juce_video" showAllCode="1" useLocalCopy="1"/>
   </MODULES>
   <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+  <LIVE_SETTINGS>
+    <OSX/>
+  </LIVE_SETTINGS>
 </JUCERPROJECT>

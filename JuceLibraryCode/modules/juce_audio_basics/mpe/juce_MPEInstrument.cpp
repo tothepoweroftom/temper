@@ -129,12 +129,12 @@ void MPEInstrument::setTimbreTrackingMode (TrackingMode modeToUse)
 }
 
 //==============================================================================
-void MPEInstrument::addListener (Listener* const listenerToAdd) noexcept
+void MPEInstrument::addListener (Listener* listenerToAdd)
 {
     listeners.add (listenerToAdd);
 }
 
-void MPEInstrument::removeListener (Listener* const listenerToRemove) noexcept
+void MPEInstrument::removeListener (Listener* listenerToRemove)
 {
     listeners.remove (listenerToRemove);
 }
@@ -156,7 +156,7 @@ void MPEInstrument::processNextMidiEvent (const MidiMessage& message)
 //==============================================================================
 void MPEInstrument::processMidiNoteOnMessage (const MidiMessage& message)
 {
-    // Note: if a note-on with velocity = 0 is used to convey a note-off,
+    // Note: If a note-on with velocity = 0 is used to convey a note-off,
     // then the actual note-off velocity is not known. In this case,
     // the MPE convention is to use note-off velocity = 64.
 
@@ -2062,7 +2062,8 @@ private:
     class UnitTestInstrument : public MPEInstrument,
                                private MPEInstrument::Listener
     {
-        typedef MPEInstrument Base;
+        using Base = MPEInstrument;
+
     public:
         UnitTestInstrument()
             : noteOnCallCounter (0),  noteOffCallCounter (0), pitchbendCallCounter (0),
@@ -2150,7 +2151,7 @@ private:
 
         bool lastSustainPedalValueReceived, lastSostenutoPedalValueReceived;
         MPEValue lastMPEValueReceived;
-        ScopedPointer<MPENote> lastNoteFinished;
+        std::unique_ptr<MPENote> lastNoteFinished;
 
     private:
         //==============================================================================

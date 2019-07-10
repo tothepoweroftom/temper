@@ -54,7 +54,7 @@ public:
                                                     object: nil];
     }
 
-    ~Pimpl()
+    ~Pimpl() override
     {
         [[NSNotificationCenter defaultCenter]  removeObserver: view];
         [[NSStatusBar systemStatusBar] removeStatusItem: statusItem];
@@ -95,7 +95,7 @@ public:
         }
         else
         {
-            auto eventMods = ModifierKeys::getCurrentModifiersRealtime();
+            auto eventMods = ComponentPeer::getCurrentModifiersRealtime();
 
             if (([e modifierFlags] & NSEventModifierFlagCommand) != 0)
                 eventMods = eventMods.withFlags (ModifierKeys::commandModifier);

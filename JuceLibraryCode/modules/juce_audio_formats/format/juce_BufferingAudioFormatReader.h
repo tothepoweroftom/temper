@@ -54,7 +54,7 @@ public:
                           TimeSliceThread& timeSliceThread,
                           int samplesToBuffer);
 
-    ~BufferingAudioReader();
+    ~BufferingAudioReader() override;
 
     /** Sets a number of milliseconds that the reader can block for in its readSamples()
         method before giving up and returning silence.
@@ -67,11 +67,11 @@ public:
                       int64 startSampleInFile, int numSamples) override;
 
 private:
-    ScopedPointer<AudioFormatReader> source;
+    std::unique_ptr<AudioFormatReader> source;
     TimeSliceThread& thread;
-    int64 nextReadPosition;
+    std::atomic<int64> nextReadPosition { 0 };
     const int numBlocks;
-    int timeoutMs;
+    int timeoutMs = 0;
 
     enum { samplesPerBlock = 32768 };
 

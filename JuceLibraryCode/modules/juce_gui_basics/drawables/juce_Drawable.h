@@ -47,7 +47,7 @@ protected:
 
 public:
     /** Destructor. */
-    virtual ~Drawable();
+    ~Drawable() override;
 
     //==============================================================================
     /** Creates a deep copy of this Drawable object.
@@ -204,7 +204,7 @@ protected:
     void applyDrawableClipPath (Graphics&);
 
     Point<int> originRelativeToComponent;
-    ScopedPointer<Drawable> drawableClipPath;
+    std::unique_ptr<Drawable> drawableClipPath;
 
     void nonConstDraw (Graphics&, float opacity, const AffineTransform&);
 

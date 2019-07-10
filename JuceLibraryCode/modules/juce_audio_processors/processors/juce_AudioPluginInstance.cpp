@@ -38,6 +38,15 @@ String AudioPluginInstance::getParameterID (int parameterIndex)
 {
     assertOnceOnDeprecatedMethodUse();
 
+    // Currently there is no corresponding method available in the
+    // AudioProcessorParameter class, and the previous behaviour of JUCE's
+    // plug-in hosting code simply returns a string version of the index; to
+    // maintain backwards compatibility you should perform the operation below
+    // this comment. However the caveat is that for plug-ins which change their
+    // number of parameters dynamically at runtime you cannot rely upon the
+    // returned parameter ID mapping to the correct parameter. A comprehensive
+    // solution to this problem requires some additional work in JUCE's hosting
+    // code.
     return String (parameterIndex);
 }
 
@@ -56,7 +65,7 @@ void AudioPluginInstance::setParameter (int parameterIndex, float newValue)
     assertOnceOnDeprecatedMethodUse();
 
     if (auto* param = getParameters()[parameterIndex])
-        return param->setValue (newValue);
+        param->setValue (newValue);
 }
 
 const String AudioPluginInstance::getParameterName (int parameterIndex)
@@ -166,7 +175,7 @@ bool AudioPluginInstance::isMetaParameter (int parameterIndex) const
     if (auto* param = getParameters()[parameterIndex])
         return param->isMetaParameter();
 
-        return false;
+    return false;
 }
 
 AudioProcessorParameter::Category AudioPluginInstance::getParameterCategory (int parameterIndex) const

@@ -66,7 +66,7 @@ public:
                    Drawable* toggledOnImage);
 
     /** Destructor. */
-    ~ToolbarButton();
+    ~ToolbarButton() override;
 
 
     //==============================================================================
@@ -86,7 +86,7 @@ public:
 
 private:
     //==============================================================================
-    ScopedPointer<Drawable> normalImage, toggledOnImage;
+    std::unique_ptr<Drawable> normalImage, toggledOnImage;
     Drawable* currentImage;
 
     void updateDrawable();
