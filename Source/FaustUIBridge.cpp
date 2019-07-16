@@ -20,6 +20,7 @@ FaustUIBridge::~FaustUIBridge()
     for (int i = 0; i < listenerAssignments.size(); ++i)
     {
         ParameterListenerPair p = listenerAssignments.getUnchecked(i);
+        
         String paramId = p.paramId;
         FaustUIBridgeListener* listener = p.listener;
         valueTreeState.removeParameterListener(paramId, listener);

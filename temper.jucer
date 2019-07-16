@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="e0DLq8" name="Temper" projectType="audioplug" version="1.0.3"
-              bundleIdentifier="com.creativeintent.temper" includeBinaryInAppConfig="1"
+<JUCERPROJECT id="e0DLq8" name="Macalla Delay" projectType="audioplug" version="0.0.1"
+              bundleIdentifier="com.tothepoweroftom.macalla" includeBinaryInAppConfig="1"
               buildVST="1" buildVST3="1" buildAU="1" buildAUv3="0" buildRTAS="0"
-              buildAAX="0" pluginName="Temper" pluginDesc="Modern digital distortion."
-              pluginManufacturer="Creative Intent" pluginManufacturerCode="Cvin"
-              pluginCode="Tmpr" pluginChannelConfigs="" pluginIsSynth="0" pluginWantsMidiIn="0"
+              buildAAX="0" pluginName="Macalla Delay" pluginDesc="Digital Delay With Modulation"
+              pluginManufacturer="tothepoweroftom" pluginManufacturerCode="Ttpt"
+              pluginCode="Maca" pluginChannelConfigs="" pluginIsSynth="0" pluginWantsMidiIn="0"
               pluginProducesMidiOut="0" pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="0"
-              pluginAUExportPrefix="TemperAU" pluginRTASCategory="" aaxIdentifier="com.creativeintent.temper"
-              pluginAAXCategory="2" jucerVersion="5.4.3" companyName="Creative Intent"
-              companyWebsite="http://www.creativeintent.co" displaySplashScreen="0"
+              pluginAUExportPrefix="MacallaAU" pluginRTASCategory="" aaxIdentifier="com.tothepoweroftom.macalla"
+              pluginAAXCategory="2" jucerVersion="5.4.3" companyName="tothepoweroftom"
+              companyWebsite="http://tothepoweroftom.com" displaySplashScreen="0"
               reportAppUsage="0" splashScreenColour="Dark" buildStandalone="1"
-              enableIAA="0" pluginFormats="buildVST,buildVST3,buildAU,buildStandalone">
-  <MAINGROUP id="NQTBxz" name="Temper">
+              enableIAA="0" pluginFormats="buildVST,buildVST3,buildAU,buildStandalone"
+              companyCopyright="2019" companyEmail="tothepoweroftom@gmail.com">
+  <MAINGROUP id="NQTBxz" name="Macalla Delay">
     <GROUP id="{B07EB401-33C5-FD72-4C14-C86C74D8477E}" name="Assets">
       <FILE id="Lgyi4M" name="Montserrat-Light.otf" compile="0" resource="1"
             file="Assets/Montserrat-Light.otf"/>
     </GROUP>
     <GROUP id="{29549935-F76D-270B-CF22-913999456CE7}" name="Source">
+      <FILE id="gcPGBG" name="DelayDSP.cpp" compile="1" resource="0" file="Source/DelayDSP.cpp"/>
       <FILE id="gFAIV8" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>
       <FILE id="SPBe1V" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>

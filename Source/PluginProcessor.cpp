@@ -10,7 +10,9 @@
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
-#include "TemperDsp.cpp"
+//#include "TemperDsp.cpp"
+#include "DelayDSP.cpp"
+
 
 const int kOversampleFactor = 3;
 
@@ -38,7 +40,9 @@ m_params (*this, nullptr)
     // Initialize the dsp units
     for (int i = 0; i < getTotalNumInputChannels(); ++i)
     {
-        TemperDsp* dsp = new TemperDsp();
+        //TemperDsp* dsp = new TemperDsp();
+        DelayDSP* dsp = new DelayDSP();
+
         dsp->buildUserInterface(m_bridge);
         m_dsps.add(dsp);
     }
@@ -210,12 +214,6 @@ void TemperAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& 
     }
 
     m_oversampler->processSamplesDown(block);
-
-#ifdef TEMPER_DEMO_BUILD
-    // After the Faust processing, add the demo restriction to the output stream
-    m_restriction->processBlock(buffer);
-#endif
-
 
 }
 

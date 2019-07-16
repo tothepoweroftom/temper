@@ -362,25 +362,25 @@
  #define JucePlugin_Enable_IAA             0
 #endif
 #ifndef  JucePlugin_Name
- #define JucePlugin_Name                   "Temper"
+ #define JucePlugin_Name                   "Macalla Delay"
 #endif
 #ifndef  JucePlugin_Desc
- #define JucePlugin_Desc                   "Modern digital distortion."
+ #define JucePlugin_Desc                   "Digital Delay With Modulation"
 #endif
 #ifndef  JucePlugin_Manufacturer
- #define JucePlugin_Manufacturer           "Creative Intent"
+ #define JucePlugin_Manufacturer           "tothepoweroftom"
 #endif
 #ifndef  JucePlugin_ManufacturerWebsite
- #define JucePlugin_ManufacturerWebsite    "http://www.creativeintent.co"
+ #define JucePlugin_ManufacturerWebsite    "http://tothepoweroftom.com"
 #endif
 #ifndef  JucePlugin_ManufacturerEmail
- #define JucePlugin_ManufacturerEmail      ""
+ #define JucePlugin_ManufacturerEmail      "tothepoweroftom@gmail.com"
 #endif
 #ifndef  JucePlugin_ManufacturerCode
- #define JucePlugin_ManufacturerCode       0x4376696e // 'Cvin'
+ #define JucePlugin_ManufacturerCode       0x54747074 // 'Ttpt'
 #endif
 #ifndef  JucePlugin_PluginCode
- #define JucePlugin_PluginCode             0x546d7072 // 'Tmpr'
+ #define JucePlugin_PluginCode             0x4d616361 // 'Maca'
 #endif
 #ifndef  JucePlugin_IsSynth
  #define JucePlugin_IsSynth                0
@@ -398,13 +398,13 @@
  #define JucePlugin_EditorRequiresKeyboardFocus  0
 #endif
 #ifndef  JucePlugin_Version
- #define JucePlugin_Version                1.0.3
+ #define JucePlugin_Version                0.0.1
 #endif
 #ifndef  JucePlugin_VersionCode
- #define JucePlugin_VersionCode            0x10003
+ #define JucePlugin_VersionCode            0x1
 #endif
 #ifndef  JucePlugin_VersionString
- #define JucePlugin_VersionString          "1.0.3"
+ #define JucePlugin_VersionString          "0.0.1"
 #endif
 #ifndef  JucePlugin_VSTUniqueID
  #define JucePlugin_VSTUniqueID            JucePlugin_PluginCode
@@ -422,16 +422,16 @@
  #define JucePlugin_AUSubType              JucePlugin_PluginCode
 #endif
 #ifndef  JucePlugin_AUExportPrefix
- #define JucePlugin_AUExportPrefix         TemperAU
+ #define JucePlugin_AUExportPrefix         MacallaAU
 #endif
 #ifndef  JucePlugin_AUExportPrefixQuoted
- #define JucePlugin_AUExportPrefixQuoted   "TemperAU"
+ #define JucePlugin_AUExportPrefixQuoted   "MacallaAU"
 #endif
 #ifndef  JucePlugin_AUManufacturerCode
  #define JucePlugin_AUManufacturerCode     JucePlugin_ManufacturerCode
 #endif
 #ifndef  JucePlugin_CFBundleIdentifier
- #define JucePlugin_CFBundleIdentifier     com.creativeintent.temper
+ #define JucePlugin_CFBundleIdentifier     com.tothepoweroftom.macalla
 #endif
 #ifndef  JucePlugin_RTASCategory
  #define JucePlugin_RTASCategory           0
@@ -449,7 +449,7 @@
  #define JucePlugin_RTASDisableMultiMono   0
 #endif
 #ifndef  JucePlugin_AAXIdentifier
- #define JucePlugin_AAXIdentifier          com.creativeintent.temper
+ #define JucePlugin_AAXIdentifier          com.tothepoweroftom.macalla
 #endif
 #ifndef  JucePlugin_AAXManufacturerCode
  #define JucePlugin_AAXManufacturerCode    JucePlugin_ManufacturerCode
@@ -473,7 +473,7 @@
  #define JucePlugin_IAASubType             JucePlugin_PluginCode
 #endif
 #ifndef  JucePlugin_IAAName
- #define JucePlugin_IAAName                "Creative Intent: Temper"
+ #define JucePlugin_IAAName                "tothepoweroftom: Macalla Delay"
 #endif
 #ifndef  JucePlugin_VSTNumMidiInputs
  #define JucePlugin_VSTNumMidiInputs       16

@@ -33,7 +33,8 @@
     Describe your class and how it works here!
                                                                     //[/Comments]
 */
-class MainComponent  : public Component
+class MainComponent  : public Component,
+                       public Slider::Listener
 {
 public:
     //==============================================================================
@@ -46,22 +47,32 @@ public:
 
     void paint (Graphics& g) override;
     void resized() override;
+    void sliderValueChanged (Slider* sliderThatWasMoved) override;
 
+    // Binary resources:
+    static const char* macalladly_png;
+    static const int macalladly_pngSize;
 
 
 private:
     //[UserVariables]   -- You can add your own custom variables in this section.
     AudioProcessorValueTreeState& m_vts;
+    /*
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> filterFreqAttachment;
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> filterResoAttachment;
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> driveAttachment;
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> satAttachment;
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> curveAttachment;
+    */
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> feedbackAttachment;
-    ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> levelAttachment;
+    ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> timeAttachment;
     //[/UserVariables]
 
     //==============================================================================
+    std::unique_ptr<Slider> slider;
+    std::unique_ptr<Slider> slider3;
+    std::unique_ptr<Slider> slider2;
+    Image cachedImage_macalladly_png_1;
 
 
     //==============================================================================
