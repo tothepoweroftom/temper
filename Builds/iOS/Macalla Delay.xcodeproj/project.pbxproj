@@ -28,24 +28,24 @@
 		0CBEBCB3B3ECF75E2CCF1A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ABB17F034350898AFF3F8AD /* LaunchScreen.storyboard */; };
 		1CDB95CBF8A78E121703AABD /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F1E6FB20F3E088CBFB1377 /* CoreMedia.framework */; };
 		1E62DE5EE4512FECE82E2E09 /* TemperDsp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5D9FB702C8DE497F23332C5A /* TemperDsp.cpp */; };
-		20DCEDFF22F0637300A27DDF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8020686175C6429750097FA6 /* Images.xcassets */; };
-		20DCEE0022F0637300A27DDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ABB17F034350898AFF3F8AD /* LaunchScreen.storyboard */; };
-		20DCEE0122F0637300A27DDF /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984DC7C1FFB0CC7F4AE7C47F /* Accelerate.framework */; };
-		20DCEE0222F0637300A27DDF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65386B81096933FA9436F33 /* AudioToolbox.framework */; };
-		20DCEE0322F0637300A27DDF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33B7FFCC2442377C56E393D /* AVFoundation.framework */; };
-		20DCEE0422F0637300A27DDF /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8426AE91646F9776A6C30E /* AVKit.framework */; };
-		20DCEE0522F0637300A27DDF /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB16E6AED0AC5A84706C552 /* CoreAudio.framework */; };
-		20DCEE0622F0637300A27DDF /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2F3F0955AD000B1DD805E0 /* CoreAudioKit.framework */; };
-		20DCEE0722F0637300A27DDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79320908BA7B29E95B4491CB /* CoreGraphics.framework */; };
-		20DCEE0822F0637300A27DDF /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A145CE7DD3684323FEAA5552 /* CoreImage.framework */; };
-		20DCEE0922F0637300A27DDF /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F1E6FB20F3E088CBFB1377 /* CoreMedia.framework */; };
-		20DCEE0A22F0637300A27DDF /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE94819A159EB97C4EB7CB0 /* CoreMIDI.framework */; };
-		20DCEE0B22F0637300A27DDF /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18018F908E3EED0A552EBA57 /* CoreText.framework */; };
-		20DCEE0C22F0637300A27DDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D203737AE0E9D572DA5C83BD /* Foundation.framework */; };
-		20DCEE0D22F0637300A27DDF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9872EDB029BC073449F8554 /* MobileCoreServices.framework */; };
-		20DCEE0E22F0637300A27DDF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDCFAE077FB569A7C96DF72 /* OpenGLES.framework */; };
-		20DCEE0F22F0637300A27DDF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946060CD40B148EF6582DC18 /* QuartzCore.framework */; };
-		20DCEE1022F0637300A27DDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729819BB3C64CEC8DC304F97 /* UIKit.framework */; };
+		20692AC022F06E3C00124251 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8020686175C6429750097FA6 /* Images.xcassets */; };
+		20692AC122F06E3C00124251 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ABB17F034350898AFF3F8AD /* LaunchScreen.storyboard */; };
+		20692AC222F06E3C00124251 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984DC7C1FFB0CC7F4AE7C47F /* Accelerate.framework */; };
+		20692AC322F06E3C00124251 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65386B81096933FA9436F33 /* AudioToolbox.framework */; };
+		20692AC422F06E3C00124251 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33B7FFCC2442377C56E393D /* AVFoundation.framework */; };
+		20692AC522F06E3C00124251 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8426AE91646F9776A6C30E /* AVKit.framework */; };
+		20692AC622F06E3C00124251 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB16E6AED0AC5A84706C552 /* CoreAudio.framework */; };
+		20692AC722F06E3C00124251 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2F3F0955AD000B1DD805E0 /* CoreAudioKit.framework */; };
+		20692AC822F06E3C00124251 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79320908BA7B29E95B4491CB /* CoreGraphics.framework */; };
+		20692AC922F06E3C00124251 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A145CE7DD3684323FEAA5552 /* CoreImage.framework */; };
+		20692ACA22F06E3C00124251 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F1E6FB20F3E088CBFB1377 /* CoreMedia.framework */; };
+		20692ACB22F06E3C00124251 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE94819A159EB97C4EB7CB0 /* CoreMIDI.framework */; };
+		20692ACC22F06E3C00124251 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18018F908E3EED0A552EBA57 /* CoreText.framework */; };
+		20692ACD22F06E3C00124251 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D203737AE0E9D572DA5C83BD /* Foundation.framework */; };
+		20692ACE22F06E3C00124251 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9872EDB029BC073449F8554 /* MobileCoreServices.framework */; };
+		20692ACF22F06E3C00124251 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDCFAE077FB569A7C96DF72 /* OpenGLES.framework */; };
+		20692AD022F06E3C00124251 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946060CD40B148EF6582DC18 /* QuartzCore.framework */; };
+		20692AD122F06E3C00124251 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729819BB3C64CEC8DC304F97 /* UIKit.framework */; };
 		274D467D0A8753F7EDBD04DF /* include_juce_audio_devices.mm in Sources */ = {isa = PBXBuildFile; fileRef = 28457B87BE9A7E186933D826 /* include_juce_audio_devices.mm */; };
 		2F31CF09BE378AD7ED861925 /* include_juce_events.mm in Sources */ = {isa = PBXBuildFile; fileRef = C338756E3C93438896949FB9 /* include_juce_events.mm */; };
 		329BCB9920BFB74FCB39B03A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9872EDB029BC073449F8554 /* MobileCoreServices.framework */; };
@@ -92,21 +92,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		20DCEE1122F0637400A27DDF /* PBXContainerItemProxy */ = {
+		20692AD222F06E3E00124251 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 161A016FC5B702D86E73B434 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B7EF72187EFCA6F380E6881C;
 			remoteInfo = "Macalla Delay - Shared Code";
 		};
-		20DCEE1222F0637400A27DDF /* PBXContainerItemProxy */ = {
+		20692AD322F06E3E00124251 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 161A016FC5B702D86E73B434 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2DA7B286493A5A32092440AA;
 			remoteInfo = "Macalla Delay - AUv3 AppExtension";
 		};
-		20DCEE1322F0637500A27DDF /* PBXContainerItemProxy */ = {
+		20692AD422F06E4000124251 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 161A016FC5B702D86E73B434 /* Project object */;
 			proxyType = 1;
@@ -239,22 +239,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20DCEE0122F0637300A27DDF /* Accelerate.framework in Frameworks */,
-				20DCEE0222F0637300A27DDF /* AudioToolbox.framework in Frameworks */,
-				20DCEE0322F0637300A27DDF /* AVFoundation.framework in Frameworks */,
-				20DCEE0422F0637300A27DDF /* AVKit.framework in Frameworks */,
-				20DCEE0522F0637300A27DDF /* CoreAudio.framework in Frameworks */,
-				20DCEE0622F0637300A27DDF /* CoreAudioKit.framework in Frameworks */,
-				20DCEE0722F0637300A27DDF /* CoreGraphics.framework in Frameworks */,
-				20DCEE0822F0637300A27DDF /* CoreImage.framework in Frameworks */,
-				20DCEE0922F0637300A27DDF /* CoreMedia.framework in Frameworks */,
-				20DCEE0A22F0637300A27DDF /* CoreMIDI.framework in Frameworks */,
-				20DCEE0B22F0637300A27DDF /* CoreText.framework in Frameworks */,
-				20DCEE0C22F0637300A27DDF /* Foundation.framework in Frameworks */,
-				20DCEE0D22F0637300A27DDF /* MobileCoreServices.framework in Frameworks */,
-				20DCEE0E22F0637300A27DDF /* OpenGLES.framework in Frameworks */,
-				20DCEE0F22F0637300A27DDF /* QuartzCore.framework in Frameworks */,
-				20DCEE1022F0637300A27DDF /* UIKit.framework in Frameworks */,
+				20692AC222F06E3C00124251 /* Accelerate.framework in Frameworks */,
+				20692AC322F06E3C00124251 /* AudioToolbox.framework in Frameworks */,
+				20692AC422F06E3C00124251 /* AVFoundation.framework in Frameworks */,
+				20692AC522F06E3C00124251 /* AVKit.framework in Frameworks */,
+				20692AC622F06E3C00124251 /* CoreAudio.framework in Frameworks */,
+				20692AC722F06E3C00124251 /* CoreAudioKit.framework in Frameworks */,
+				20692AC822F06E3C00124251 /* CoreGraphics.framework in Frameworks */,
+				20692AC922F06E3C00124251 /* CoreImage.framework in Frameworks */,
+				20692ACA22F06E3C00124251 /* CoreMedia.framework in Frameworks */,
+				20692ACB22F06E3C00124251 /* CoreMIDI.framework in Frameworks */,
+				20692ACC22F06E3C00124251 /* CoreText.framework in Frameworks */,
+				20692ACD22F06E3C00124251 /* Foundation.framework in Frameworks */,
+				20692ACE22F06E3C00124251 /* MobileCoreServices.framework in Frameworks */,
+				20692ACF22F06E3C00124251 /* OpenGLES.framework in Frameworks */,
+				20692AD022F06E3C00124251 /* QuartzCore.framework in Frameworks */,
+				20692AD122F06E3C00124251 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,8 +602,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20DCEDFF22F0637300A27DDF /* Images.xcassets in Resources */,
-				20DCEE0022F0637300A27DDF /* LaunchScreen.storyboard in Resources */,
+				20692AC022F06E3C00124251 /* Images.xcassets in Resources */,
+				20692AC122F06E3C00124251 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,17 +666,17 @@
 		B89C1BC467892DF12D5BECDB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B4FFFFFD24A70BAECA79D226 /* Macalla Delay - Standalone Plugin */;
-			targetProxy = 20DCEE1322F0637500A27DDF /* PBXContainerItemProxy */;
+			targetProxy = 20692AD422F06E4000124251 /* PBXContainerItemProxy */;
 		};
 		BDECFAD9F9178C805ECF040C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B7EF72187EFCA6F380E6881C /* Macalla Delay - Shared Code */;
-			targetProxy = 20DCEE1122F0637400A27DDF /* PBXContainerItemProxy */;
+			targetProxy = 20692AD222F06E3E00124251 /* PBXContainerItemProxy */;
 		};
 		CBA9AF98930EDCE7CFD3A92F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2DA7B286493A5A32092440AA /* Macalla Delay - AUv3 AppExtension */;
-			targetProxy = 20DCEE1222F0637400A27DDF /* PBXContainerItemProxy */;
+			targetProxy = 20692AD322F06E3E00124251 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -693,6 +693,10 @@
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3VAN3LG67D;
+				FRAMEWORK_SEARCH_PATHS = (
+					../../Include,
+					"$(inherited)",
+				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -790,6 +794,10 @@
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3VAN3LG67D;
+				FRAMEWORK_SEARCH_PATHS = (
+					../../Include,
+					"$(inherited)",
+				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -836,6 +844,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					../../Include,
+					"$(inherited)",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -882,6 +894,10 @@
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 3VAN3LG67D;
+				FRAMEWORK_SEARCH_PATHS = (
+					../../Include,
+					"$(inherited)",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -926,6 +942,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				DEAD_CODE_STRIPPING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					../../Include,
+					"$(inherited)",
+				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -972,6 +992,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					../../Include,
+					"$(inherited)",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1014,6 +1038,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				DEAD_CODE_STRIPPING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					../../Include,
+					"$(inherited)",
+				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1110,6 +1138,10 @@
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 3VAN3LG67D;
+				FRAMEWORK_SEARCH_PATHS = (
+					../../Include,
+					"$(inherited)",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
