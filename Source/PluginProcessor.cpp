@@ -10,8 +10,14 @@
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
+<<<<<<< Updated upstream
 #include "TemperDsp.cpp"
 
+=======
+//#include "TemperDsp.cpp"
+//#include "DelayDSP.cpp"
+#include "MacallaEngine.cpp"
+>>>>>>> Stashed changes
 const int kOversampleFactor = 3;
 
 //==============================================================================
@@ -38,7 +44,13 @@ m_params (*this, nullptr)
     // Initialize the dsp units
     for (int i = 0; i < getTotalNumInputChannels(); ++i)
     {
+<<<<<<< Updated upstream
         TemperDsp* dsp = new TemperDsp();
+=======
+        //TemperDsp* dsp = new TemperDsp();
+        MacallaDSP* dsp = new MacallaDSP();
+
+>>>>>>> Stashed changes
         dsp->buildUserInterface(m_bridge);
         m_dsps.add(dsp);
     }

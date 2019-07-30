@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<<<<<<< Updated upstream
 <JUCERPROJECT id="e0DLq8" name="Temper" projectType="audioplug" version="1.0.3"
               bundleIdentifier="com.creativeintent.temper" includeBinaryInAppConfig="1"
               buildVST="1" buildVST3="1" buildAU="1" buildAUv3="0" buildRTAS="0"
@@ -13,6 +14,22 @@
               displaySplashScreen="0" reportAppUsage="0" splashScreenColour="Dark"
               buildStandalone="1" enableIAA="0">
   <MAINGROUP id="NQTBxz" name="Temper">
+=======
+<JUCERPROJECT id="e0DLq8" name="Macalla Delay" projectType="audioplug" version="0.0.1"
+              bundleIdentifier="com.tothepoweroftom.macalla" includeBinaryInAppConfig="1"
+              buildVST="1" buildVST3="1" buildAU="1" buildAUv3="1" buildRTAS="0"
+              buildAAX="0" pluginName="Macalla Delay" pluginDesc="Digital Delay With Modulation"
+              pluginManufacturer="tothepoweroftom" pluginManufacturerCode="Ttpt"
+              pluginCode="Maca" pluginChannelConfigs="" pluginIsSynth="0" pluginWantsMidiIn="0"
+              pluginProducesMidiOut="0" pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="0"
+              pluginAUExportPrefix="MacallaAU" pluginRTASCategory="" aaxIdentifier="com.tothepoweroftom.macalla"
+              pluginAAXCategory="2" jucerVersion="5.4.3" companyName="tothepoweroftom"
+              companyWebsite="http://tothepoweroftom.com" displaySplashScreen="0"
+              reportAppUsage="0" splashScreenColour="Dark" buildStandalone="1"
+              enableIAA="0" pluginFormats="buildAU,buildAUv3,buildStandalone,buildVST,buildVST3"
+              companyCopyright="2019" companyEmail="tothepoweroftom@gmail.com">
+  <MAINGROUP id="NQTBxz" name="Macalla Delay">
+>>>>>>> Stashed changes
     <GROUP id="{B07EB401-33C5-FD72-4C14-C86C74D8477E}" name="Assets">
       <FILE id="qQ2cig" name="Background.png" compile="0" resource="1" file="Assets/Background.png"/>
       <FILE id="ePVyns" name="BeeStingPreset.xml" compile="0" resource="1"
@@ -31,10 +48,16 @@
             file="Assets/StubbedToePreset.xml"/>
     </GROUP>
     <GROUP id="{29549935-F76D-270B-CF22-913999456CE7}" name="Source">
+<<<<<<< Updated upstream
       <FILE id="DVaBKb" name="SpectroscopeComponent.cpp" compile="1" resource="0"
             file="Source/SpectroscopeComponent.cpp"/>
       <FILE id="mjtLV5" name="SpectroscopeComponent.h" compile="0" resource="0"
             file="Source/SpectroscopeComponent.h"/>
+=======
+      <FILE id="QaREhF" name="MacallaEngine.cpp" compile="1" resource="0"
+            file="../../../Developer/DSP/MacallaEngine.cpp"/>
+      <FILE id="gcPGBG" name="DelayDSP.cpp" compile="1" resource="0" file="Source/DelayDSP.cpp"/>
+>>>>>>> Stashed changes
       <FILE id="gFAIV8" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>
       <FILE id="SPBe1V" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
@@ -139,6 +162,30 @@
         <MODULEPATH id="juce_audio_utils" path="../JUCE/modules"/>
       </MODULEPATHS>
     </VS2017>
+    <XCODE_IPHONE targetFolder="Builds/iOS">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_video"/>
+        <MODULEPATH id="juce_opengl"/>
+        <MODULEPATH id="juce_gui_extra"/>
+        <MODULEPATH id="juce_gui_basics"/>
+        <MODULEPATH id="juce_graphics"/>
+        <MODULEPATH id="juce_events"/>
+        <MODULEPATH id="juce_dsp"/>
+        <MODULEPATH id="juce_data_structures"/>
+        <MODULEPATH id="juce_cryptography"/>
+        <MODULEPATH id="juce_core"/>
+        <MODULEPATH id="juce_audio_utils"/>
+        <MODULEPATH id="juce_audio_processors"/>
+        <MODULEPATH id="juce_audio_plugin_client"/>
+        <MODULEPATH id="juce_audio_formats"/>
+        <MODULEPATH id="juce_audio_devices"/>
+        <MODULEPATH id="juce_audio_basics"/>
+      </MODULEPATHS>
+    </XCODE_IPHONE>
   </EXPORTFORMATS>
   <MODULES>
     <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="1"/>
@@ -159,4 +206,10 @@
     <MODULE id="juce_video" showAllCode="1" useLocalCopy="1"/>
   </MODULES>
   <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+<<<<<<< Updated upstream
+=======
+  <LIVE_SETTINGS>
+    <OSX buildEnabled="1"/>
+  </LIVE_SETTINGS>
+>>>>>>> Stashed changes
 </JUCERPROJECT>

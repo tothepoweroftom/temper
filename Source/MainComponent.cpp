@@ -34,6 +34,7 @@ MainComponent::MainComponent (AudioProcessorValueTreeState& vts)
     //[Constructor_pre] You can add your own custom stuff here..
     //[/Constructor_pre]
 
+<<<<<<< Updated upstream
     addAndMakeVisible (m_cutoffSlider = new Slider ("Cutoff"));
     m_cutoffSlider->setRange (100, 20000, 0);
     m_cutoffSlider->setSliderStyle (Slider::RotaryHorizontalVerticalDrag);
@@ -133,16 +134,36 @@ MainComponent::MainComponent (AudioProcessorValueTreeState& vts)
     m_gainLabel->setColour (TextEditor::backgroundColourId, Colour (0x00000000));
 
     drawable1 = Drawable::createFromImageData (BinaryData::Background_png, BinaryData::Background_pngSize);
+=======
+    slider.reset (new Slider ("freeze"));
+    addAndMakeVisible (slider.get());
+    slider->setTooltip (TRANS("freeze the delay"));
+    slider->setRange (0, 1, 1);
+    slider->setSliderStyle (Slider::LinearHorizontal);
+    slider->setTextBoxStyle (Slider::TextBoxLeft, false, 80, 20);
+    slider->addListener (this);
+
+    slider->setBounds (64, 88, 150, 24);
+
+    cachedImage_macalladly_png_1 = ImageCache::getFromMemory (macalladly_png, macalladly_pngSize);
+>>>>>>> Stashed changes
 
     //[UserPreSize]
+    widthOfParent = getParentWidth();
+    heightOfParent = getParentHeight();
     //[/UserPreSize]
 
     setSize (744, 476);
 
 
     //[Constructor] You can add your own custom stuff here..
+<<<<<<< Updated upstream
     filterFreqAttachment = new SliderAttachment(m_vts, "Cutoff", *m_cutoffSlider);
     filterResoAttachment = new SliderAttachment(m_vts, "Resonance", *m_resoSlider);
+=======
+    freezeAttachment = new SliderAttachment(m_vts, "Freeze", *slider);
+    /*
+>>>>>>> Stashed changes
     driveAttachment = new SliderAttachment(m_vts, "Drive", *m_driveSlider);
     curveAttachment = new SliderAttachment(m_vts, "Curve", *m_curveSlider);
     satAttachment = new SliderAttachment(m_vts, "Saturation", *m_satSlider);
@@ -163,6 +184,7 @@ MainComponent::~MainComponent()
     // when the ScopedPointer<> delete policy tries to remove Listeners from
     // the SliderAttachment it refers to the Sliders themselves. If the Sliders
     // have already been deleted at that point then we get a null pointer error.
+<<<<<<< Updated upstream
     filterFreqAttachment = nullptr;
     filterResoAttachment = nullptr;
     driveAttachment = nullptr;
@@ -187,6 +209,17 @@ MainComponent::~MainComponent()
     m_feedbackLabel = nullptr;
     m_gainLabel = nullptr;
     drawable1 = nullptr;
+=======
+//    filterFreqAttachment = nullptr;
+//    filterResoAttachment = nullptr;
+//    driveAttachment = nullptr;
+//    curveAttachment = nullptr;
+//    satAttachment = nullptr;
+    freezeAttachment = nullptr;
+    //[/Destructor_pre]
+
+    slider = nullptr;
+>>>>>>> Stashed changes
 
 
     //[Destructor]. You can add your own custom destruction code here..
@@ -199,11 +232,28 @@ void MainComponent::paint (Graphics& g)
     //[UserPrePaint] Add your own custom painting code here..
     //[/UserPrePaint]
 
+<<<<<<< Updated upstream
     g.setColour (Colours::black);
     jassert (drawable1 != 0);
     if (drawable1 != 0)
         drawable1->drawWithin (g, Rectangle<float> (0, 0, 744, 476),
                                RectanglePlacement::stretchToFit, 1.000f);
+=======
+    g.fillAll (Colours::bisque);
+
+    {
+        int x = 2, y = 2, width = 741, height = 471;
+        //[UserPaintCustomArguments] Customize the painting arguments here..
+        width = widthOfParent;
+        height = heightOfParent;
+        //[/UserPaintCustomArguments]
+        g.setColour (Colours::black);
+        g.drawImageWithin (cachedImage_macalladly_png_1,
+                           x, y, width, height,
+                           RectanglePlacement::centred,
+                           false);
+    }
+>>>>>>> Stashed changes
 
     //[UserPaint] Add your own custom painting code here..
     //[/UserPaint]
@@ -212,6 +262,8 @@ void MainComponent::paint (Graphics& g)
 void MainComponent::resized()
 {
     //[UserPreResize] Add your own custom resize code here..
+
+
     //[/UserPreResize]
 
     m_cutoffSlider->setBounds (28, 149, 72, 72);
@@ -229,9 +281,40 @@ void MainComponent::resized()
     m_feedbackLabel->setBounds (637, 111, 80, 20);
     m_gainLabel->setBounds (639, 369, 80, 20);
     //[UserResized] Add your own custom resize handling here..
+    setSize(getParentWidth(), getParentHeight());
+
     //[/UserResized]
 }
 
+<<<<<<< Updated upstream
+=======
+void MainComponent::sliderValueChanged (Slider* sliderThatWasMoved)
+{
+    //[UsersliderValueChanged_Pre]
+    //[/UsersliderValueChanged_Pre]
+
+    if (sliderThatWasMoved == slider.get())
+    {
+        //[UserSliderCode_slider] -- add your slider handling code here..
+        //[/UserSliderCode_slider]
+    }
+
+    //[UsersliderValueChanged_Post]
+    //[/UsersliderValueChanged_Post]
+}
+
+void MainComponent::parentSizeChanged()
+{
+    //[UserCode_parentSizeChanged] -- Add your code here...
+    widthOfParent = getParentWidth();
+    heightOfParent = getParentHeight();
+
+    slider->setBounds (proportionOfWidth (0.2903f), proportionOfHeight (0.2143f), proportionOfWidth (0.4395f), proportionOfHeight (0.5042f));
+
+    //[/UserCode_parentSizeChanged]
+}
+
+>>>>>>> Stashed changes
 
 
 //[MiscUserCode] You can add your own definitions of your custom methods or any other code here...
@@ -252,6 +335,7 @@ BEGIN_JUCER_METADATA
                  variableInitialisers="m_vts(vts)" snapPixels="8" snapActive="1"
                  snapShown="1" overlayOpacity="0.330" fixedSize="1" initialWidth="744"
                  initialHeight="476">
+<<<<<<< Updated upstream
   <BACKGROUND backgroundColour="ffffff">
     <IMAGE pos="0 0 744 476" resource="BinaryData::Background_png" opacity="1"
            mode="0"/>
@@ -326,6 +410,19 @@ BEGIN_JUCER_METADATA
          edTextCol="ff000000" edBkgCol="0" labelText="LEVEL" editableSingleClick="0"
          editableDoubleClick="0" focusDiscardsChanges="0" fontname="Default font"
          fontsize="15" bold="0" italic="0" justification="36"/>
+=======
+  <METHODS>
+    <METHOD name="parentSizeChanged()"/>
+  </METHODS>
+  <BACKGROUND backgroundColour="ffffe4c4">
+    <IMAGE pos="2 2 741 471" resource="macalladly_png" opacity="1.0" mode="1"/>
+  </BACKGROUND>
+  <SLIDER name="freeze" id="7c643d947161e45" memberName="slider" virtualName=""
+          explicitFocusOrder="0" pos="64 88 150 24" tooltip="freeze the delay"
+          min="0.0" max="1.0" int="1.0" style="LinearHorizontal" textBoxPos="TextBoxLeft"
+          textBoxEditable="1" textBoxWidth="80" textBoxHeight="20" skewFactor="1.0"
+          needsCallback="1"/>
+>>>>>>> Stashed changes
 </JUCER_COMPONENT>
 
 END_JUCER_METADATA

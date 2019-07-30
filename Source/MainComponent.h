@@ -47,6 +47,11 @@ public:
 
     void paint (Graphics& g) override;
     void resized() override;
+<<<<<<< Updated upstream
+=======
+    void sliderValueChanged (Slider* sliderThatWasMoved) override;
+    void parentSizeChanged() override;
+>>>>>>> Stashed changes
 
 
 
@@ -58,6 +63,7 @@ private:
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> driveAttachment;
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> satAttachment;
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> curveAttachment;
+<<<<<<< Updated upstream
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> feedbackAttachment;
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> levelAttachment;
     //[/UserVariables]
@@ -78,6 +84,19 @@ private:
     ScopedPointer<Label> m_feedbackLabel;
     ScopedPointer<Label> m_gainLabel;
     ScopedPointer<Drawable> drawable1;
+=======
+    */
+    ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> freezeAttachment;
+    ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> timeAttachment;
+    int widthOfParent;
+    int heightOfParent;
+
+    //[/UserVariables]
+
+    //==============================================================================
+    std::unique_ptr<Slider> slider;
+    Image cachedImage_macalladly_png_1;
+>>>>>>> Stashed changes
 
 
     //==============================================================================

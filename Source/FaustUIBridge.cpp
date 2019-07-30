@@ -9,6 +9,7 @@
 */
 
 #include "FaustUIBridge.h"
+#include <iostream>
 
 FaustUIBridge::FaustUIBridge(AudioProcessorValueTreeState& vts)
 : valueTreeState(vts)
@@ -17,10 +18,15 @@ FaustUIBridge::FaustUIBridge(AudioProcessorValueTreeState& vts)
 
 FaustUIBridge::~FaustUIBridge()
 {
+    
+    using std::cout;
+    using std::endl;
+    
     for (int i = 0; i < listenerAssignments.size(); ++i)
     {
         ParameterListenerPair p = listenerAssignments.getUnchecked(i);
         String paramId = p.paramId;
+        cout << paramId << endl;
         FaustUIBridgeListener* listener = p.listener;
         valueTreeState.removeParameterListener(paramId, listener);
     }
