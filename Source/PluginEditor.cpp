@@ -26,7 +26,7 @@ TemperAudioProcessorEditor::TemperAudioProcessorEditor (TemperAudioProcessor& p,
     m_glContext.setComponentPaintingEnabled(true);
     m_glContext.attachTo(*this);
 
-    setSize (744, 476);
+    setSize (getWidth(), getHeight());
     setLookAndFeel(&laf);
 }
 
@@ -46,6 +46,6 @@ void TemperAudioProcessorEditor::paint (Graphics& g)
 
 void TemperAudioProcessorEditor::resized()
 {
-    m_main->setBounds(0, 0, 744, 476);
+    m_main->setBounds(0, 0, getWidth(), getHeight());
 
 }

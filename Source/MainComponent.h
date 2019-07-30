@@ -52,6 +52,8 @@ public:
     // Binary resources:
     static const char* macalladly_png;
     static const int macalladly_pngSize;
+    static const char* vst_png;
+    static const int vst_pngSize;
 
 
 private:
@@ -70,9 +72,9 @@ private:
 
     //==============================================================================
     std::unique_ptr<Slider> slider;
-    std::unique_ptr<Slider> slider3;
     std::unique_ptr<Slider> slider2;
-    Image cachedImage_macalladly_png_1;
+    std::unique_ptr<Slider> slider3;
+    Image cachedImage_vst_png_1;
 
 
     //==============================================================================

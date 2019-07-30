@@ -50,7 +50,7 @@ void TemperLookAndFeel::drawLabel(Graphics& g, Label& l)
 void TemperLookAndFeel::drawRotarySlider (Graphics& g, int x, int y, int width, int height, float sliderPos,
                                        const float rotaryStartAngle, const float rotaryEndAngle, Slider& slider)
 {
-    const float radius = jmin (width / 2, height / 2) - 2.0f;
+    const float radius = jmin (width / 2, height / 2) - 10.0f;
     const float centreX = x + width * 0.5f;
     const float centreY = y + height * 0.5f;
     const float rx = centreX - radius;
@@ -60,7 +60,7 @@ void TemperLookAndFeel::drawRotarySlider (Graphics& g, int x, int y, int width, 
     const bool isMouseOver = slider.isMouseOverOrDragging() && slider.isEnabled();
 
     // Draw the readout
-    Colour readoutColour = Colour::fromRGB(0, 0, 0).withAlpha(isMouseOver ? 1.0f : 0.9f);
+    Colour readoutColour = Colour::fromRGB(0, 0, 0).withAlpha(isMouseOver ? 1.0f : 0.5f);
     const double value = slider.getValue();
     String readoutValue = (value >= 1000.0 ? String(value / 1000.0, 1) + "k" : String(value, 1));
     String readout = readoutValue + slider.getTextValueSuffix();
@@ -77,8 +77,8 @@ void TemperLookAndFeel::drawRotarySlider (Graphics& g, int x, int y, int width, 
     g.strokePath(track, PathStrokeType(3.0f));
 
     // Draw the slider position
-    Colour sliderFillStart = Colour::fromRGBA(0, 0, 0, 255).withAlpha(isMouseOver ? 1.0f : 0.9f);
-    Colour sliderFillStop = Colour::fromRGBA(50, 50, 50, 255).withAlpha(isMouseOver ? 1.0f : 0.9f);
+    Colour sliderFillStart = Colour::fromRGBA(100, 100, 100, 255).withAlpha(isMouseOver ? 1.0f : 0.5f);
+    Colour sliderFillStop = Colour::fromRGBA(0, 0, 0, 255).withAlpha(isMouseOver ? 1.0f : 0.5f);
     ColourGradient sliderFill = ColourGradient(sliderFillStart,
                                                (float) x,
                                                (float) 0,

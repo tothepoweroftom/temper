@@ -2,7 +2,7 @@
 
 <JUCERPROJECT id="e0DLq8" name="Macalla Delay" projectType="audioplug" version="0.0.1"
               bundleIdentifier="com.tothepoweroftom.macalla" includeBinaryInAppConfig="1"
-              buildVST="1" buildVST3="1" buildAU="1" buildAUv3="0" buildRTAS="0"
+              buildVST="1" buildVST3="1" buildAU="1" buildAUv3="1" buildRTAS="0"
               buildAAX="0" pluginName="Macalla Delay" pluginDesc="Digital Delay With Modulation"
               pluginManufacturer="tothepoweroftom" pluginManufacturerCode="Ttpt"
               pluginCode="Maca" pluginChannelConfigs="" pluginIsSynth="0" pluginWantsMidiIn="0"
@@ -11,7 +11,7 @@
               pluginAAXCategory="2" jucerVersion="5.4.3" companyName="tothepoweroftom"
               companyWebsite="http://tothepoweroftom.com" displaySplashScreen="0"
               reportAppUsage="0" splashScreenColour="Dark" buildStandalone="1"
-              enableIAA="0" pluginFormats="buildVST,buildVST3,buildAU,buildStandalone"
+              enableIAA="1" pluginFormats="buildAU,buildAUv3,buildStandalone,buildVST,buildVST3,enableIAA"
               companyCopyright="2019" companyEmail="tothepoweroftom@gmail.com">
   <MAINGROUP id="NQTBxz" name="Macalla Delay">
     <GROUP id="{B07EB401-33C5-FD72-4C14-C86C74D8477E}" name="Assets">
@@ -22,6 +22,8 @@
       <FILE id="gcPGBG" name="DelayDSP.cpp" compile="1" resource="0" file="Source/DelayDSP.cpp"/>
       <FILE id="gFAIV8" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>
+      <FILE id="orVDfi" name="MacallaEngine.cpp" compile="1" resource="0"
+            file="../../../Developer/DSP/MacallaEngine.cpp"/>
       <FILE id="SPBe1V" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="qucmWu" name="TemperLookAndFeel.cpp" compile="1" resource="0"
             file="Source/TemperLookAndFeel.cpp"/>
@@ -83,47 +85,30 @@
         <MODULEPATH id="juce_audio_utils" path="../JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
-    <VS2017 targetFolder="Builds/VisualStudio2017" vst3Folder="VST3_SDK">
+    <XCODE_IPHONE targetFolder="Builds/iOS">
       <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
-                       isDebug="1" optimisation="1" targetName="Temper" binaryPath="Builds/VisualStudio2017/Debug/"
-                       headerPath="../../Include"/>
-        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
-                       isDebug="1" optimisation="1" targetName="Temper (x64)" binaryPath="Builds/VisualStudio2017/Debug/"
-                       headerPath="../../Include"/>
-        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
-                       isDebug="0" optimisation="3" targetName="Temper" binaryPath="Builds/VisualStudio2017/Release/"
-                       headerPath="../../Include"/>
-        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
-                       isDebug="0" optimisation="3" targetName="Temper (x64)" binaryPath="Builds/VisualStudio2017/Release/"
-                       headerPath="../../Include"/>
-        <CONFIGURATION name="Demo" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
-                       isDebug="0" optimisation="3" targetName="Temper (Demo)" binaryPath="Builds/VisualStudio2017/Demo/"
-                       headerPath="../../Include" defines="TEMPER_DEMO_BUILD=1"/>
-        <CONFIGURATION name="Demo" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
-                       isDebug="0" optimisation="3" targetName="Temper (x64)(Demo)"
-                       binaryPath="Builds/VisualStudio2017/Demo/" headerPath="../../Include"
-                       defines="TEMPER_DEMO_BUILD=1"/>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_video" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_opengl" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_gui_extra" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_graphics" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_events" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_data_structures" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_cryptography" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_core" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_audio_plugin_client" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_dsp" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_video"/>
+        <MODULEPATH id="juce_opengl"/>
+        <MODULEPATH id="juce_gui_extra"/>
+        <MODULEPATH id="juce_gui_basics"/>
+        <MODULEPATH id="juce_graphics"/>
+        <MODULEPATH id="juce_events"/>
+        <MODULEPATH id="juce_dsp"/>
+        <MODULEPATH id="juce_data_structures"/>
+        <MODULEPATH id="juce_cryptography"/>
+        <MODULEPATH id="juce_core"/>
+        <MODULEPATH id="juce_audio_utils"/>
+        <MODULEPATH id="juce_audio_processors"/>
+        <MODULEPATH id="juce_audio_plugin_client"/>
+        <MODULEPATH id="juce_audio_formats"/>
+        <MODULEPATH id="juce_audio_devices"/>
+        <MODULEPATH id="juce_audio_basics"/>
       </MODULEPATHS>
-    </VS2017>
+    </XCODE_IPHONE>
   </EXPORTFORMATS>
   <MODULES>
     <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="1"/>
