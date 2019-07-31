@@ -22,9 +22,16 @@ Font TemperLookAndFeel::getBaseFont()
 }
 
 
+Font TemperLookAndFeel::getFancyFont()
+{
+    return Font(Typeface::createSystemTypefaceFor(BinaryData::celtic_gaelige_otf,
+                                                  BinaryData::celtic_gaelige_otfSize));
+}
+
+
 Font TemperLookAndFeel::getLabelFont(Label &)
 {
-    return getBaseFont().withPointHeight(10);
+    return getFancyFont().withPointHeight(16);
 }
 
 Font TemperLookAndFeel::getSliderReadoutFont()
@@ -94,3 +101,7 @@ void TemperLookAndFeel::drawRotarySlider (Graphics& g, int x, int y, int width, 
     PathStrokeType(3.0f).createStrokedPath(filledArc, filledArc);
     g.fillPath(filledArc);
 }
+
+
+
+

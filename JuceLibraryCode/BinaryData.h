@@ -8,11 +8,14 @@
 
 namespace BinaryData
 {
+    extern const char*   celtic_gaelige_otf;
+    const int            celtic_gaelige_otfSize = 109752;
+
     extern const char*   MontserratLight_otf;
     const int            MontserratLight_otfSize = 91496;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 1;
+    const int namedResourceListSize = 2;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

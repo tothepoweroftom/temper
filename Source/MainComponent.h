@@ -54,6 +54,14 @@ public:
     static const int macalladly_pngSize;
     static const char* vst_png;
     static const int vst_pngSize;
+    static const char* _2_png;
+    static const int _2_pngSize;
+    static const char* _2_png2;
+    static const int _2_png2Size;
+    static const char* vst2_png;
+    static const int vst2_pngSize;
+    static const char* vst2_png2;
+    static const int vst2_png2Size;
 
 
 private:
@@ -66,15 +74,22 @@ private:
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> satAttachment;
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> curveAttachment;
     */
-    ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> feedbackAttachment;
+    ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> glitchAttachment;
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> timeAttachment;
     //[/UserVariables]
 
     //==============================================================================
-    std::unique_ptr<Slider> slider;
-    std::unique_ptr<Slider> slider2;
-    std::unique_ptr<Slider> slider3;
-    Image cachedImage_vst_png_1;
+    std::unique_ptr<Slider> glitchSlider;
+    std::unique_ptr<Slider> dryWetSlider;
+    std::unique_ptr<Slider> feedbackSlider;
+    std::unique_ptr<Slider> pitchSlider;
+    std::unique_ptr<Slider> timeSlider;
+    std::unique_ptr<Label> label;
+    std::unique_ptr<Label> label2;
+    std::unique_ptr<Label> label3;
+    std::unique_ptr<Label> label4;
+    std::unique_ptr<Label> label5;
+    Image cachedImage_vst2_png2_1;
 
 
     //==============================================================================

@@ -12,7 +12,7 @@
 #include "PluginEditor.h"
 //#include "TemperDsp.cpp"
 #include "DelayDSP.cpp"
-
+//#include "MacallaDSP.cpp"
 
 const int kOversampleFactor = 3;
 
@@ -41,7 +41,7 @@ m_params (*this, nullptr)
     for (int i = 0; i < getTotalNumInputChannels(); ++i)
     {
         //TemperDsp* dsp = new TemperDsp();
-        DelayDSP* dsp = new DelayDSP();
+        MacallaDSP* dsp = new MacallaDSP();
 
         dsp->buildUserInterface(m_bridge);
         m_dsps.add(dsp);

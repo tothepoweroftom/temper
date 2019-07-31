@@ -15,15 +15,15 @@
               companyCopyright="2019" companyEmail="tothepoweroftom@gmail.com">
   <MAINGROUP id="NQTBxz" name="Macalla Delay">
     <GROUP id="{B07EB401-33C5-FD72-4C14-C86C74D8477E}" name="Assets">
+      <FILE id="GcOD7h" name="celtic_gaelige.otf" compile="0" resource="1"
+            file="Assets/celtic_gaelige.otf" xcodeResource="0"/>
       <FILE id="Lgyi4M" name="Montserrat-Light.otf" compile="0" resource="1"
-            file="Assets/Montserrat-Light.otf"/>
+            file="Assets/Montserrat-Light.otf" xcodeResource="0"/>
     </GROUP>
     <GROUP id="{29549935-F76D-270B-CF22-913999456CE7}" name="Source">
       <FILE id="gcPGBG" name="DelayDSP.cpp" compile="1" resource="0" file="Source/DelayDSP.cpp"/>
       <FILE id="gFAIV8" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>
-      <FILE id="orVDfi" name="MacallaEngine.cpp" compile="1" resource="0"
-            file="../../../Developer/DSP/MacallaEngine.cpp"/>
       <FILE id="SPBe1V" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="qucmWu" name="TemperLookAndFeel.cpp" compile="1" resource="0"
             file="Source/TemperLookAndFeel.cpp"/>

@@ -19,6 +19,8 @@ public:
     TemperLookAndFeel();
 
     Font getBaseFont ();
+    Font getFancyFont ();
+
     Font getLabelFont (Label&) override;
     Font getSliderReadoutFont ();
 
@@ -26,6 +28,8 @@ public:
     void drawRotarySlider (Graphics&, int x, int y, int width, int height,
                            float sliderPosProportional, float rotaryStartAngle, float rotaryEndAngle,
                            Slider&) override;
+    
+
 };
 
 #endif  // TEMPERLOOKANDFEEL_H_INCLUDED
