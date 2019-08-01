@@ -69,7 +69,7 @@ void TemperLookAndFeel::drawRotarySlider (Graphics& g, int x, int y, int width, 
     // Draw the readout
     Colour readoutColour = Colour::fromRGB(0, 0, 0).withAlpha(isMouseOver ? 1.0f : 0.5f);
     const double value = slider.getValue();
-    String readoutValue = (value >= 1000.0 ? String(value / 1000.0, 1) + "k" : String(value, 1));
+    String readoutValue = (value >= 10000.0 ? String(value / 1000.0, 1) + "k" : String(value, 1));
     String readout = readoutValue + slider.getTextValueSuffix();
 
     g.setColour(readoutColour);
