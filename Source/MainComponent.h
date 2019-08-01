@@ -74,6 +74,9 @@ private:
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> satAttachment;
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> curveAttachment;
     */
+    ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> levelAttachment;
+    ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> filterAttachment;
+    ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> feedbackAttachment;
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> glitchAttachment;
     ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> timeAttachment;
     //[/UserVariables]
@@ -82,7 +85,7 @@ private:
     std::unique_ptr<Slider> glitchSlider;
     std::unique_ptr<Slider> dryWetSlider;
     std::unique_ptr<Slider> feedbackSlider;
-    std::unique_ptr<Slider> pitchSlider;
+    std::unique_ptr<Slider> filterSlider;
     std::unique_ptr<Slider> timeSlider;
     std::unique_ptr<Label> label;
     std::unique_ptr<Label> label2;
