@@ -43,7 +43,7 @@
 namespace ProjectInfo
 {
     const char* const  projectName    = "Macalla Delay";
-    const char* const  companyName    = "tothepoweroftom";
+    const char* const  companyName    = "Wild Surmise Music";
     const char* const  versionString  = "0.0.1";
     const int          versionNumber  = 0x1;
 }

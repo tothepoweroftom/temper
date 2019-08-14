@@ -347,10 +347,10 @@
  #define JucePlugin_Build_AUv3             1
 #endif
 #ifndef  JucePlugin_Build_RTAS
- #define JucePlugin_Build_RTAS             0
+ #define JucePlugin_Build_RTAS             1
 #endif
 #ifndef  JucePlugin_Build_AAX
- #define JucePlugin_Build_AAX              0
+ #define JucePlugin_Build_AAX              1
 #endif
 #ifndef  JucePlugin_Build_Standalone
  #define JucePlugin_Build_Standalone       1
@@ -359,25 +359,25 @@
  #define JucePlugin_Build_Unity            0
 #endif
 #ifndef  JucePlugin_Enable_IAA
- #define JucePlugin_Enable_IAA             1
+ #define JucePlugin_Enable_IAA             0
 #endif
 #ifndef  JucePlugin_Name
  #define JucePlugin_Name                   "Macalla Delay"
 #endif
 #ifndef  JucePlugin_Desc
- #define JucePlugin_Desc                   "Digital Delay With Modulation"
+ #define JucePlugin_Desc                   "Digital Delay With Glitch"
 #endif
 #ifndef  JucePlugin_Manufacturer
- #define JucePlugin_Manufacturer           "tothepoweroftom"
+ #define JucePlugin_Manufacturer           "Wild Surmise Music"
 #endif
 #ifndef  JucePlugin_ManufacturerWebsite
- #define JucePlugin_ManufacturerWebsite    "http://tothepoweroftom.com"
+ #define JucePlugin_ManufacturerWebsite    "http://wildsurmisemusic.com"
 #endif
 #ifndef  JucePlugin_ManufacturerEmail
- #define JucePlugin_ManufacturerEmail      "tothepoweroftom@gmail.com"
+ #define JucePlugin_ManufacturerEmail      "tom@wildsurmisemusic.com"
 #endif
 #ifndef  JucePlugin_ManufacturerCode
- #define JucePlugin_ManufacturerCode       0x54747074 // 'Ttpt'
+ #define JucePlugin_ManufacturerCode       0x57736d75 // 'Wsmu'
 #endif
 #ifndef  JucePlugin_PluginCode
  #define JucePlugin_PluginCode             0x4d616361 // 'Maca'
@@ -431,10 +431,10 @@
  #define JucePlugin_AUManufacturerCode     JucePlugin_ManufacturerCode
 #endif
 #ifndef  JucePlugin_CFBundleIdentifier
- #define JucePlugin_CFBundleIdentifier     com.tothepoweroftom.macalla
+ #define JucePlugin_CFBundleIdentifier     com.wildsurmisemusic.macalla
 #endif
 #ifndef  JucePlugin_RTASCategory
- #define JucePlugin_RTASCategory           0
+ #define JucePlugin_RTASCategory           16
 #endif
 #ifndef  JucePlugin_RTASManufacturerCode
  #define JucePlugin_RTASManufacturerCode   JucePlugin_ManufacturerCode
@@ -449,7 +449,7 @@
  #define JucePlugin_RTASDisableMultiMono   0
 #endif
 #ifndef  JucePlugin_AAXIdentifier
- #define JucePlugin_AAXIdentifier          com.tothepoweroftom.macalla
+ #define JucePlugin_AAXIdentifier          com.wildsurmisemusic.macalla
 #endif
 #ifndef  JucePlugin_AAXManufacturerCode
  #define JucePlugin_AAXManufacturerCode    JucePlugin_ManufacturerCode
@@ -458,7 +458,7 @@
  #define JucePlugin_AAXProductId           JucePlugin_PluginCode
 #endif
 #ifndef  JucePlugin_AAXCategory
- #define JucePlugin_AAXCategory            2
+ #define JucePlugin_AAXCategory            16
 #endif
 #ifndef  JucePlugin_AAXDisableBypass
  #define JucePlugin_AAXDisableBypass       0
@@ -473,7 +473,7 @@
  #define JucePlugin_IAASubType             JucePlugin_PluginCode
 #endif
 #ifndef  JucePlugin_IAAName
- #define JucePlugin_IAAName                "tothepoweroftom: Macalla Delay"
+ #define JucePlugin_IAAName                "Wild Surmise Music: Macalla Delay"
 #endif
 #ifndef  JucePlugin_VSTNumMidiInputs
  #define JucePlugin_VSTNumMidiInputs       16

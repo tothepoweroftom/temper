@@ -109,10 +109,6 @@
 			isa = PBXBuildFile;
 			fileRef = 0DF7613DEBCCF4E1B2EDC4A8;
 		};
-		1E62DE5EE4512FECE82E2E09 = {
-			isa = PBXBuildFile;
-			fileRef = 5D9FB702C8DE497F23332C5A;
-		};
 		46761BF0558068478B8ABEC2 = {
 			isa = PBXBuildFile;
 			fileRef = 51A99C88D24F6FA6EB420D8C;
@@ -248,13 +244,6 @@
 			lastKnownFileType = file.otf;
 			name = "Montserrat-Light.otf";
 			path = "../../Assets/Montserrat-Light.otf";
-			sourceTree = "SOURCE_ROOT";
-		};
-		14D4268476DD0608C84D8C8E = {
-			isa = PBXFileReference;
-			lastKnownFileType = text.plist.xml;
-			name = "Macalla Delay.entitlements";
-			path = "Macalla Delay.entitlements";
 			sourceTree = "SOURCE_ROOT";
 		};
 		18018F908E3EED0A552EBA57 = {
@@ -402,13 +391,6 @@
 			lastKnownFileType = file;
 			name = "juce_audio_plugin_client";
 			path = "../../JuceLibraryCode/modules/juce_audio_plugin_client";
-			sourceTree = "SOURCE_ROOT";
-		};
-		5D9FB702C8DE497F23332C5A = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.cpp;
-			name = TemperDsp.cpp;
-			path = ../../Source/TemperDsp.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
 		655E5FC18EFF266ED39F59A0 = {
@@ -775,7 +757,6 @@
 				655E5FC18EFF266ED39F59A0,
 				0DF7613DEBCCF4E1B2EDC4A8,
 				F0E83AB8627EEB12A5F354C9,
-				5D9FB702C8DE497F23332C5A,
 				51A99C88D24F6FA6EB420D8C,
 				DA17DD1163220461EDB43F01,
 				41F4ED3215862F7062B2B713,
@@ -893,7 +874,6 @@
 		16B7A8795DC462581C0D3409 = {
 			isa = PBXGroup;
 			children = (
-				14D4268476DD0608C84D8C8E,
 				78D8756494305AA83D310EA9,
 				FC58AB75B20CF5AE97BA51D3,
 				7F3BE1629581C7BA6B7F806F,
@@ -941,7 +921,7 @@
 					"$(inherited)",
 				);
 				OTHER_LDFLAGS = "-lMacalla\\ Delay";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tothepoweroftom.macalla;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildsurmisemusic.macalla;
 				PRODUCT_NAME = "Macalla Delay";
 				USE_HEADERMAP = NO;
 			};
@@ -986,7 +966,7 @@
 				);
 				LLVM_LTO = YES;
 				OTHER_LDFLAGS = "-lMacalla\\ Delay";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tothepoweroftom.macalla;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildsurmisemusic.macalla;
 				PRODUCT_NAME = "Macalla Delay";
 				USE_HEADERMAP = NO;
 			};
@@ -1031,7 +1011,7 @@
 				INFOPLIST_FILE = Info-AUv3_AppExtension.plist;
 				INFOPLIST_PREPROCESS = NO;
 				OTHER_LDFLAGS = "-lMacalla\\ Delay";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tothepoweroftom.macalla.macallaAUv3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildsurmisemusic.macalla.macallaAUv3;
 				PRODUCT_NAME = "Macalla Delay";
 				USE_HEADERMAP = NO;
 			};
@@ -1078,7 +1058,7 @@
 				INFOPLIST_PREPROCESS = NO;
 				LLVM_LTO = YES;
 				OTHER_LDFLAGS = "-lMacalla\\ Delay";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tothepoweroftom.macalla.macallaAUv3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildsurmisemusic.macalla.macallaAUv3;
 				PRODUCT_NAME = "Macalla Delay";
 				USE_HEADERMAP = NO;
 			};
@@ -1092,7 +1072,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_LINK_OBJC_RUNTIME = NO;
-				CODE_SIGN_ENTITLEMENTS = "Macalla Delay.entitlements";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
@@ -1124,7 +1103,7 @@
 				INFOPLIST_FILE = Info-Standalone_Plugin.plist;
 				INFOPLIST_PREPROCESS = NO;
 				OTHER_LDFLAGS = "-lMacalla\\ Delay";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tothepoweroftom.macalla;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildsurmisemusic.macalla;
 				PRODUCT_NAME = "Macalla Delay";
 				USE_HEADERMAP = NO;
 			};
@@ -1138,7 +1117,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_LINK_OBJC_RUNTIME = NO;
-				CODE_SIGN_ENTITLEMENTS = "Macalla Delay.entitlements";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				DEAD_CODE_STRIPPING = YES;
@@ -1172,7 +1150,7 @@
 				INFOPLIST_PREPROCESS = NO;
 				LLVM_LTO = YES;
 				OTHER_LDFLAGS = "-lMacalla\\ Delay";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tothepoweroftom.macalla;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildsurmisemusic.macalla;
 				PRODUCT_NAME = "Macalla Delay";
 				USE_HEADERMAP = NO;
 			};
@@ -1216,7 +1194,7 @@
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tothepoweroftom.macalla;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildsurmisemusic.macalla;
 				PRODUCT_NAME = "Macalla Delay";
 				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;
@@ -1263,7 +1241,7 @@
 				);
 				INSTALL_PATH = "@executable_path/Frameworks";
 				LLVM_LTO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tothepoweroftom.macalla;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildsurmisemusic.macalla;
 				PRODUCT_NAME = "Macalla Delay";
 				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;
@@ -1574,7 +1552,6 @@
 				7895E7D833D1029782229EBF,
 				7D138E4AA28C1C976EA1D186,
 				5996B7821900A1790016AADE,
-				1E62DE5EE4512FECE82E2E09,
 				46761BF0558068478B8ABEC2,
 				CB115CA1ED358F980E1CBE6F,
 				9C5A0DCFFD53650C343E142F,
@@ -1614,7 +1591,7 @@
 		161A016FC5B702D86E73B434 = {
 			isa = PBXProject;
 			buildConfigurationList = E3D10272E9BD334B9AC87536;
-			attributes = { LastUpgradeCheck = 1010; ORGANIZATIONNAME = "tothepoweroftom"; TargetAttributes = { 2BEC471FAEF6D07D8826CB28 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };2DA7B286493A5A32092440AA = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 1; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };B4FFFFFD24A70BAECA79D226 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 1; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };B7EF72187EFCA6F380E6881C = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; }; }; };
+			attributes = { LastUpgradeCheck = 1010; ORGANIZATIONNAME = "Wild Surmise Music"; TargetAttributes = { 2BEC471FAEF6D07D8826CB28 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };2DA7B286493A5A32092440AA = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 1; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };B4FFFFFD24A70BAECA79D226 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };B7EF72187EFCA6F380E6881C = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; }; }; };
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
 			mainGroup = 16B7A8795DC462581C0D3409;

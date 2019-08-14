@@ -12,7 +12,7 @@
     <key>CFBundleExecutable</key>
     <string>${EXECUTABLE_NAME}</string>
     <key>CFBundleIdentifier</key>
-    <string>com.tothepoweroftom.macalla.macallaAUv3</string>
+    <string>com.wildsurmisemusic.macalla.macallaAUv3</string>
     <key>CFBundleName</key>
     <string>Macalla Delay</string>
     <key>CFBundleDisplayName</key>
@@ -41,13 +41,13 @@
         <array>
           <dict>
             <key>name</key>
-            <string>tothepoweroftom: Macalla Delay</string>
+            <string>Wild Surmise Music: Macalla Delay</string>
             <key>description</key>
-            <string>Digital Delay With Modulation</string>
+            <string>Digital Delay With Glitch</string>
             <key>factoryFunction</key>
             <string>MacallaAUFactoryAUv3</string>
             <key>manufacturer</key>
-            <string>Ttpt</string>
+            <string>Wsmu</string>
             <key>type</key>
             <string>aufx</string>
             <key>subtype</key>

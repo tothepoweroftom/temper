@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="e0DLq8" name="Macalla Delay" projectType="audioplug" version="0.0.1"
-              bundleIdentifier="com.tothepoweroftom.macalla" includeBinaryInAppConfig="1"
-              buildVST="1" buildVST3="1" buildAU="1" buildAUv3="1" buildRTAS="0"
-              buildAAX="0" pluginName="Macalla Delay" pluginDesc="Digital Delay With Modulation"
-              pluginManufacturer="tothepoweroftom" pluginManufacturerCode="Ttpt"
+              bundleIdentifier="com.wildsurmisemusic.macalla" includeBinaryInAppConfig="1"
+              buildVST="1" buildVST3="1" buildAU="1" buildAUv3="1" buildRTAS="1"
+              buildAAX="1" pluginName="Macalla Delay" pluginDesc="Digital Delay With Glitch"
+              pluginManufacturer="Wild Surmise Music" pluginManufacturerCode="Wsmu"
               pluginCode="Maca" pluginChannelConfigs="" pluginIsSynth="0" pluginWantsMidiIn="0"
               pluginProducesMidiOut="0" pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="0"
-              pluginAUExportPrefix="MacallaAU" pluginRTASCategory="" aaxIdentifier="com.tothepoweroftom.macalla"
-              pluginAAXCategory="2" jucerVersion="5.4.3" companyName="tothepoweroftom"
-              companyWebsite="http://tothepoweroftom.com" displaySplashScreen="0"
-              reportAppUsage="0" splashScreenColour="Dark" buildStandalone="1"
-              enableIAA="1" pluginFormats="buildAU,buildAUv3,buildStandalone,buildVST,buildVST3,enableIAA"
-              companyCopyright="2019" companyEmail="tothepoweroftom@gmail.com">
+              pluginAUExportPrefix="MacallaAU" pluginRTASCategory="16" aaxIdentifier="com.wildsurmisemusic.macalla"
+              jucerVersion="5.4.3" companyName="Wild Surmise Music" companyWebsite="http://wildsurmisemusic.com"
+              displaySplashScreen="0" reportAppUsage="0" splashScreenColour="Dark"
+              buildStandalone="1" enableIAA="0" pluginFormats="buildAAX,buildAU,buildAUv3,buildRTAS,buildStandalone,buildVST,buildVST3"
+              companyCopyright="2019" companyEmail="tom@wildsurmisemusic.com"
+              pluginAAXCategory="16">
   <MAINGROUP id="NQTBxz" name="Macalla Delay">
     <GROUP id="{B07EB401-33C5-FD72-4C14-C86C74D8477E}" name="Assets">
       <FILE id="GcOD7h" name="celtic_gaelige.otf" compile="0" resource="1"
@@ -36,7 +36,6 @@
       <FILE id="UuoykJ" name="FaustUIBridge.cpp" compile="1" resource="0"
             file="Source/FaustUIBridge.cpp"/>
       <FILE id="WOgbWW" name="FaustUIBridge.h" compile="0" resource="0" file="Source/FaustUIBridge.h"/>
-      <FILE id="bXhXHd" name="TemperDsp.cpp" compile="1" resource="0" file="Source/TemperDsp.cpp"/>
       <FILE id="zqfjaI" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="S64Obd" name="PluginProcessor.h" compile="0" resource="0"

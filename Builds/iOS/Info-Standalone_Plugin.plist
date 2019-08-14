@@ -14,7 +14,7 @@
     <key>CFBundleExecutable</key>
     <string>${EXECUTABLE_NAME}</string>
     <key>CFBundleIdentifier</key>
-    <string>com.tothepoweroftom.macalla</string>
+    <string>com.wildsurmisemusic.macalla</string>
     <key>CFBundleName</key>
     <string>Macalla Delay</string>
     <key>CFBundleDisplayName</key>
@@ -48,20 +48,5 @@
     </array>
     <key>UIBackgroundModes</key>
     <array/>
-    <key>AudioComponents</key>
-    <array>
-      <dict>
-        <key>name</key>
-        <string>tothepoweroftom: Macalla Delay</string>
-        <key>manufacturer</key>
-        <string>Ttpt</string>
-        <key>type</key>
-        <string>aurx</string>
-        <key>subtype</key>
-        <string>Maca</string>
-        <key>version</key>
-        <integer>1</integer>
-      </dict>
-    </array>
   </dict>
 </plist>

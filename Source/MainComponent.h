@@ -50,18 +50,14 @@ public:
     void sliderValueChanged (Slider* sliderThatWasMoved) override;
 
     // Binary resources:
-    static const char* macalladly_png;
-    static const int macalladly_pngSize;
-    static const char* vst_png;
-    static const int vst_pngSize;
-    static const char* _2_png;
-    static const int _2_pngSize;
-    static const char* _2_png2;
-    static const int _2_png2Size;
-    static const char* vst2_png;
-    static const int vst2_pngSize;
     static const char* vst2_png2;
     static const int vst2_png2Size;
+    static const char* vst_png;
+    static const int vst_pngSize;
+    static const char* vst3_png;
+    static const int vst3_pngSize;
+    static const char* background_png;
+    static const int background_pngSize;
 
 
 private:
@@ -92,7 +88,7 @@ private:
     std::unique_ptr<Label> label3;
     std::unique_ptr<Label> label4;
     std::unique_ptr<Label> label5;
-    Image cachedImage_vst2_png2_1;
+    Image cachedImage_background_png_1;
 
 
     //==============================================================================
